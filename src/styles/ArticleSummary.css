@@ -1,22 +1,41 @@
 .ArticleSummary {
-  margin: 1em 0 1em 0;
+  margin: 1em 1em 1em 1em;
   display: grid;
-  grid-template-columns: 1fr 3fr 3fr;
-  grid-template-rows: 4fr 1fr;
+  grid-template-columns: 50px 2fr 3fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
     'votes title title'
     'votes author time';
   border: 1px solid orange;
+  background-color: var(--light-grey);
 }
 .article-votes {
   grid-area: votes;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--dark-grey);
 }
 .article-title {
   grid-area: title;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 1.1em;
+  color: var(--primary-color);
 }
 .article-author {
   grid-area: author;
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--dark-grey);
 }
 .article-time {
   grid-area: time;
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--dark-grey);
 }

@@ -8,7 +8,7 @@ const ArticleSummary = ({ article }) => {
       <div className="article-votes">{article.votes}</div>
       <div className="article-title">{article.title}</div>
       <div className="article-author">By {article.author}</div>
-      <div className="article-time">Posted {article.created_at}</div>
+      <div className="article-time">Posted on {article.created_at}</div>
     </div>
   );
 };

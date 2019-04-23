@@ -19,7 +19,7 @@ class App extends Component {
         <Nav topics={topics} />
         <Router className="ArticleContainer">
           <ArticleList path="/" />
-          <ArticleList path="/topics/:topic_id" />
+          <ArticleList path="/topics/:topic" />
         </Router>
       </div>
     );
