@@ -7,17 +7,40 @@
     'votes time'
     'body body';
   padding: 1em;
+  margin: 0.5em 1em 0.5em 1em;
+  border: 1px solid pink;
 }
 
 .comment-votes {
   grid-area: votes;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 1.2em;
+  color: var(--dark-grey);
 }
 .comment-author {
   grid-area: author;
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--dark-grey);
 }
 .comment-time {
   grid-area: time;
 }
+
+.comment-author,
+.comment-time {
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--dark-grey);
+}
+
 .comment-body {
   grid-area: body;
+  font-family: var(--body-font);
+  color: var(--dark-grey);
 }

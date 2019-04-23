@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Comment } from './index';
+import * as api from '../utils/api';
+import * as data from '../utils/data';
 import '../styles/ArticleSingle.css';
-import Comment from './Comment';
 
 class ArticleSingle extends Component {
   state = {
@@ -8,6 +10,7 @@ class ArticleSingle extends Component {
     article: {},
     comments: [],
   };
+
   render() {
     const {
       comments,
@@ -33,6 +36,29 @@ class ArticleSingle extends Component {
       </div>
     );
   }
+
+  componentDidMount() {
+    this.fetchArticle();
+    this.fetchComments();
+  }
+
+  fetchArticle = () => {
+    const { article_id } = this.props;
+    api.getArticleByID(article_id).then(article => {
+      article = {
+        ...article,
+        created_at: data.convertArticleDate(article.created_at),
+      };
+      this.setState({ article, loading: false });
+    });
+  };
+
+  fetchComments = () => {
+    const { article_id } = this.props;
+    api.getCommentsByArticle(article_id).then(comments => {
+      this.setState({ comments });
+    });
+  };
 }
 
 export default ArticleSingle;

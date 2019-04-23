@@ -1,11 +1,29 @@
-.ArticleSort {
-  margin: 1em 1em 1em 1em;
+.ArticleSort label {
+  margin: 0 0.25em 0 0;
+  font-family: var(--header-font);
+  font-weight: 500;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: var(--dark-grey);
 }
 
 .sort-dropdown {
-  min-height: 1.8em;
+  height: 1.5em;
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.9em;
+  background: #ffffff;
+  border: 1px solid var(--medium-grey);
+  border-radius: 0.5em 0.1em 0.1em 0.5em;
 }
 
 .sort-button {
-  min-height: 1.8em;
+  height: 1.5em;
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-size: 0.9em;
+  background: #ffffff;
+  border: 1px solid var(--medium-grey);
+  border-radius: 0.1em 0.5em 0.5em 0.1em;
 }

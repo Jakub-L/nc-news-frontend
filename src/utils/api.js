@@ -14,3 +14,15 @@ export const getArticles = async (topic, sortBy, sortOrder) => {
   );
   return data.articles;
 };
+
+export const getArticleByID = async id => {
+  const { data } = await axios.get(`${BASE_URL}/articles/${id}`);
+  return data.article;
+};
+
+export const getCommentsByArticle = async article_id => {
+  const { data } = await axios.get(
+    `${BASE_URL}/articles/${article_id}/comments`
+  );
+  return data.comments;
+};
