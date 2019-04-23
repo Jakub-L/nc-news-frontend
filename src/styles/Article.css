@@ -1,0 +1,43 @@
+.article-and-comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.Article {
+  margin: 1em 1em 1em 1em;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 1fr 1fr 5fr;
+  grid-template-areas:
+    'votes title'
+    'votes author'
+    'body body';
+}
+
+.article-votes {
+  grid-area: votes;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--dark-grey);
+}
+.article-title {
+  grid-area: title;
+  font-family: var(--header-font);
+  font-weight: 700;
+  font-size: 1.1em;
+  color: var(--primary-color);
+}
+.article-author-time {
+  grid-area: author;
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--dark-grey);
+}
+.article-body {
+  grid-area: body;
+  font-family: var(--body-font);
+  color: var(--dark-grey);
+}

@@ -1,0 +1,23 @@
+.Comment {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-areas:
+    'votes author'
+    'votes time'
+    'body body';
+  padding: 1em;
+}
+
+.comment-votes {
+  grid-area: votes;
+}
+.comment-author {
+  grid-area: author;
+}
+.comment-time {
+  grid-area: time;
+}
+.comment-body {
+  grid-area: body;
+}

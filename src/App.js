@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Router } from '@reach/router';
 import './styles/App.css';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import ArticleList from './components/ArticleList';
-import { Router } from '@reach/router';
+import Article from './components/Article';
 import * as api from './utils/api';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
         <Router className="ArticleContainer">
           <ArticleList path="/" />
           <ArticleList path="/topics/:topic" />
+          <Article path="/articles/:article_id" />
         </Router>
       </div>
     );
