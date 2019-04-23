@@ -1,38 +1,50 @@
 .ArticleSummary {
-  margin: 1em 0em 1em 0em;
+  margin: 0.5em 0em 0.5em 0em;
   display: grid;
-  grid-template-columns: 50px 2fr 3fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3em 2fr 3fr;
+  grid-template-rows: 2fr 1fr;
   grid-template-areas:
     'votes title title'
     'votes author time';
-  border: 1px solid orange;
+  border: 0px;
+  border-radius: 2em 0.5em 0.5em 2em;
   background-color: var(--light-grey);
 }
+
+.ArticleSummary a:hover {
+  transform: scale(1.01);
+  transform-origin: left center;
+}
+
 .article-votes {
   grid-area: votes;
+  margin: auto 0;
   font-family: var(--header-font);
   font-weight: 700;
   font-size: 2em;
+  text-align: center;
   color: var(--dark-grey);
 }
 .article-title {
   grid-area: title;
+  margin: auto 0;
   font-family: var(--header-font);
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: var(--primary-color);
+  text-decoration: none;
 }
 .article-author {
   grid-area: author;
-  font-family: var(--body-font);
-  font-weight: 300;
-  font-style: italic;
-  font-size: 0.8em;
-  color: var(--dark-grey);
 }
 .article-time {
   grid-area: time;
+}
+
+.article-time,
+.article-author {
+  margin: auto 0;
+  height: 1.8em;
   font-family: var(--body-font);
   font-weight: 300;
   font-style: italic;
