@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { Router } from '@reach/router';
-import './styles/App.css';
-import Header from './components/Header';
-import Nav from './components/Nav';
-import ArticleList from './components/ArticleList';
-import Article from './components/Article';
+import { Header, ArticleSingle, ArticleList, Nav } from './components';
 import * as api from './utils/api';
+import './styles/App.css';
 
 class App extends Component {
   state = {
@@ -18,10 +15,10 @@ class App extends Component {
       <div className="App">
         <Header />
         <Nav topics={topics} />
-        <Router className="ArticleContainer">
+        <Router className="MainContainer">
           <ArticleList path="/" />
           <ArticleList path="/topics/:topic" />
-          <Article path="/articles/:article_id" />
+          <ArticleSingle path="/articles/:article_id" />
         </Router>
       </div>
     );

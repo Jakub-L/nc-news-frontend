@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import ArticleSummary from './ArticleSummary';
+import { ArticleSummary, ArticleSort } from './index';
 import * as data from '../utils/data';
 import * as api from '../utils/api';
 import '../styles/ArticleList.css';
-import ArticleSort from './ArticleSort';
 
 class ArticleList extends Component {
   state = {
