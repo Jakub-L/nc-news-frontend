@@ -1,0 +1,22 @@
+.ArticleSummary {
+  margin: 1em 0 1em 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr;
+  grid-template-rows: 4fr 1fr;
+  grid-template-areas:
+    'votes title title'
+    'votes author time';
+  border: 1px solid orange;
+}
+.article-votes {
+  grid-area: votes;
+}
+.article-title {
+  grid-area: title;
+}
+.article-author {
+  grid-area: author;
+}
+.article-time {
+  grid-area: time;
+}
