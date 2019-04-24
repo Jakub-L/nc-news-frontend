@@ -1,9 +1,9 @@
-.Vote {
+.Voter {
   display: flex;
   flex-direction: column;
 }
 
-.Vote #votes {
+.Voter #votes {
   margin: 0;
   padding: 0;
   font-family: var(--header-font);
@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-.Vote button {
+.Voter button {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -22,14 +22,14 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-.Vote button:hover {
+.Voter button:hover {
   color: var(--primary-color);
 }
 
-.Vote button:disabled {
+.Voter button:disabled {
   color: var(--medium-grey);
 }
 
-.Vote button:focus {
+.Voter button:focus {
   outline: none;
 }

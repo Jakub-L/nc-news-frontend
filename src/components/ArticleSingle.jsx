@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Comment, Vote, CommentSubmit } from './index';
+import { CommentCard, Voter, CommentSubmit } from './index';
 import * as api from '../utils/api';
 import * as data from '../utils/data';
 import '../styles/ArticleSingle.css';
@@ -24,7 +24,7 @@ class ArticleSingle extends Component {
       <div className="ArticleSingle">
         <div className="article">
           <div className="article-votes">
-            <Vote votes={votes} section="article" id={article_id} />
+            <Voter votes={votes} section="article" id={article_id} />
           </div>
           <div className="article-title">{title}</div>
           <div className="article-author-time">
@@ -36,7 +36,7 @@ class ArticleSingle extends Component {
         {user ? <CommentSubmit addComment={this.addComment} /> : null}
         {comments.map(comment => {
           return (
-            <Comment
+            <CommentCard
               key={comment.comment_id}
               comment={comment}
               removeComment={this.removeComment}

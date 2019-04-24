@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import * as api from '../utils/api';
-import '../styles/Vote.css';
+import '../styles/Voter.css';
 
-class Vote extends Component {
+class Voter extends Component {
   state = {
     votes: 0,
     sentVotes: 0,
@@ -11,7 +11,7 @@ class Vote extends Component {
     const { votes, sentVotes } = this.state;
     const user = JSON.parse(sessionStorage.getItem('user'));
     return (
-      <div className="Vote">
+      <div className="Voter">
         <button
           id="up-vote"
           disabled={sentVotes === 1 || !user}
@@ -44,4 +44,4 @@ class Vote extends Component {
   };
 }
 
-export default Vote;
+export default Voter;

@@ -1,4 +1,4 @@
-.ArticleSummary {
+.ArticleCard {
   margin: 0.5em 0em;
   display: grid;
   grid-template-columns: 4em auto 1fr;

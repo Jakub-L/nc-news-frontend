@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/Comment.css';
-import Vote from './Voter';
+import '../styles/CommentCard.css';
+import { Voter } from './index';
 
-const Comment = ({ comment, removeComment }) => {
+const CommentCard = ({ comment, removeComment }) => {
   const { comment_id, votes, created_at, author, body } = comment;
   const storedUser = JSON.parse(sessionStorage.getItem('user'));
   return (
-    <div className="Comment">
+    <div className="CommentCard">
       <div className="comment-votes">
-        <Vote votes={votes} section="comment" id={comment_id} />
+        <Voter votes={votes} section="comment" id={comment_id} />
       </div>
       <div className="comment-author">{author}</div>
       <div className="comment-time">{created_at}</div>
@@ -37,4 +37,4 @@ Comment.propTypes = {
   }).isRequired,
 };
 
-export default Comment;
+export default CommentCard;

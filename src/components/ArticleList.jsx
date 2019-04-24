@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ArticleSummary, ArticleSort } from './index';
+import { ArticleCard, ArticleSort } from './index';
 import * as data from '../utils/data';
 import * as api from '../utils/api';
 import '../styles/ArticleList.css';
@@ -26,7 +26,7 @@ class ArticleList extends Component {
           <p className="loading">Loading . . .</p>
         ) : (
           articles.map(article => (
-            <ArticleSummary key={article.article_id} article={article} />
+            <ArticleCard key={article.article_id} article={article} />
           ))
         )}
       </div>

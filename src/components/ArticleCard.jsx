@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Vote } from './index';
+import { Voter } from './index';
 import { Link } from '@reach/router';
-import '../styles/ArticleSummary.css';
+import '../styles/ArticleCard.css';
 
-const ArticleSummary = ({ article, user }) => {
+const ArticleCard = ({ article, user }) => {
   return (
-    <div className="ArticleSummary">
+    <div className="ArticleCard">
       <div className="article-votes">
-        <Vote
+        <Voter
           votes={article.votes}
           section="article"
           id={article.article_id}
@@ -29,7 +29,7 @@ const ArticleSummary = ({ article, user }) => {
   );
 };
 
-ArticleSummary.propTypes = {
+ArticleCard.propTypes = {
   article: PropTypes.shape({
     votes: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
@@ -38,4 +38,4 @@ ArticleSummary.propTypes = {
   }).isRequired,
 };
 
-export default ArticleSummary;
+export default ArticleCard;

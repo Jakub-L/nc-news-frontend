@@ -1,4 +1,4 @@
-.Comment {
+.CommentCard {
   display: grid;
   grid-template-columns: 4em auto 6em;
   grid-template-rows: auto auto auto;
