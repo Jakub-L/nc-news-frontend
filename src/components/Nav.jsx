@@ -7,15 +7,17 @@ const Nav = ({ topics, logout }) => {
   const user = JSON.parse(sessionStorage.getItem('user'));
   return (
     <nav className="Nav">
-      <Link to="/">Home</Link>
-      <div className="dropdown">
-        <div className="dropdown-button">Topics</div>
-        <div className="dropdown-content">
+      <Link to="/" className="nav-link">
+        Home
+      </Link>
+      <div className="dropdown-container nav-link">
+        <div className="nav-link">Topics</div>
+        <div className="dropdown-list">
           {topics.map(topic => (
             <Link
               key={topic.slug}
               to={`/topics/${topic.slug}`}
-              className="dropdown-link"
+              className="dropdown-list-link nav-link"
             >
               {topic.slug}
             </Link>
@@ -23,12 +25,15 @@ const Nav = ({ topics, logout }) => {
         </div>
       </div>
       {user ? (
-        <button onClick={logout}>
-          Logout<br />
-          <span>({user.username})</span>
+        <button onClick={logout} className="nav-link">
+          Logout
+          <br />
+          <span className="nav-link-subheading">({user.username})</span>
         </button>
       ) : (
-        <Link to="/auth">Login</Link>
+        <Link to="/auth" className="nav-link">
+          Login
+        </Link>
       )}
     </nav>
   );

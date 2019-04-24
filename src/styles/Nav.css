@@ -1,74 +1,56 @@
 .Nav {
-  display: flex;
-  padding: 0.3em 0 0.3em 0;
+  padding: 0.3em 0;
   grid-area: nav;
+  display: flex;
   background-color: var(--light-grey);
   justify-content: space-evenly;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
 .Nav button {
-  line-height: 0.85em;
-  padding: 0;
-  font-family: var(--header-font);
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--dark-grey);
-  font-size: 1em;
-  margin: auto 0;
   border: none;
-  background-color: var(--light-grey);
+  line-height: 0.85em;
 }
 
-.Nav button span {
-  font-size: 0.7em;
-  margin: 0;
-}
-
-.Nav a,
-.dropdown {
+.nav-link {
+  min-width: 5.5em;
+  margin: auto 0;
+  padding: 0;
+  display: block;
   font-family: var(--header-font);
-  font-weight: 700;
   font-size: 1em;
-  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   color: var(--dark-grey);
-  display: block;
-  margin: auto 0;
-  min-width: 5.5em;
-  text-align: center;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content {
-  margin: auto 0;
-  display: none;
-  position: absolute;
   background-color: var(--light-grey);
-  z-index: 1;
-  min-width: 5em;
-  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 0.5em;
-}
-
-.Nav a:hover,
-.Nav button:hover,
-.dropdown:hover,
-.dropdown-content a:hover {
+.nav-link:hover {
   font-weight: bold;
   transform: scale(1.02);
   color: var(--primary-color);
 }
 
-.Nav button:focus {
+.nav-link:focus {
   outline: none;
+}
+
+.nav-link-subheading {
+  font-size: 0.7em;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-list-link {
+  padding: 0.5em;
+}
+
+.dropdown-container:hover .dropdown-list {
+  display: block;
 }

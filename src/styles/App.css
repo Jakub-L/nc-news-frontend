@@ -16,15 +16,40 @@
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 3.5em auto 15fr;
+  grid-template-rows: 3em 2.5em auto;
   grid-template-areas:
     'header'
     'nav'
     'article-list';
 }
 
-.MainContainer {
+.main-container {
   grid-area: article-list;
   overflow: auto;
   padding: 1em;
+}
+
+.heading {
+  font-family: var(--header-font);
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.subheading {
+  font-family: var(--body-font);
+  font-size: 0.8em;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--dark-grey);
+}
+
+/* ELEMENT STYLES */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }

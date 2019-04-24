@@ -16,6 +16,7 @@ class ArticleList extends Component {
     const { articles, loading, sortOrder } = this.state;
     return (
       <div className="ArticleList">
+        <h2 className="heading">NCNews/{this.props.topic || 'all'}</h2>
         <ArticleSort
           updateSortCategory={this.updateSortCategory}
           updateSortOrder={this.updateSortOrder}
@@ -25,10 +26,7 @@ class ArticleList extends Component {
           <p className="loading">Loading . . .</p>
         ) : (
           articles.map(article => (
-            <ArticleSummary
-              key={article.article_id}
-              article={article}
-            />
+            <ArticleSummary key={article.article_id} article={article} />
           ))
         )}
       </div>

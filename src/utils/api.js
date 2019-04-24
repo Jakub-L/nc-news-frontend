@@ -48,6 +48,5 @@ export const postComment = async (id, username, body) => {
 };
 
 export const deleteComment = async id => {
-  const { status } = await axios.delete(`${BASE_URL}/comments/${id}`);
-  return status;
+  await axios.delete(`${BASE_URL}/comments/${id}`);
 };

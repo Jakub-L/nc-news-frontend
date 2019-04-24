@@ -16,7 +16,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Nav topics={topics} logout={this.logout} />
-        <Router className="MainContainer">
+        <Router className="main-container">
           <ArticleList path="/" />
           <ArticleList path="/topics/:topic" />
           <ArticleSingle path="/articles/:article_id" />

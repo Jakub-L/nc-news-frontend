@@ -15,11 +15,16 @@ const ArticleSummary = ({ article, user }) => {
           user={user}
         />
       </div>
-      <Link to={`/articles/${article.article_id}`} className="article-title">
+      <Link
+        to={`/articles/${article.article_id}`}
+        className="article-title heading"
+      >
         {article.title}
       </Link>
-      <div className="article-author">By {article.author}</div>
-      <div className="article-time">Posted on {article.created_at}</div>
+      <div className="article-author subheading">By {article.author}</div>
+      <div className="article-time subheading">
+        Posted on {article.created_at}
+      </div>
     </div>
   );
 };

@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+.ArticleList h2 {
+  margin: 0;
+  text-align: center;
+}
+
 .loading {
   font-family: var(--header-font);
   font-size: 1.5em;
