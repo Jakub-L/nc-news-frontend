@@ -1,15 +1,36 @@
 .Comment {
   display: grid;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 4em auto 6em;
   grid-template-rows: auto auto auto;
   grid-template-areas:
-    'votes author'
-    'votes time'
-    'votes body';
+    'votes author delete'
+    'votes time delete'
+    'votes body body';
   padding: 1em 1em 1em 0.2em;
   margin: 0.5em 1em 0.5em 1em;
   background-color: var(--light-grey);
   border-radius: 2em;
+}
+
+.comment-delete {
+  grid-area: delete;
+  margin: auto;
+  height: 1.5em;
+  width: 5em;
+  font-family: var(--header-font);
+  font-weight: 300;
+  font-size: 1em;
+  background: #ffffff;
+  border: 1px solid var(--medium-grey);
+  border-radius: 0.5em;
+}
+
+.comment-delete:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  transform: scale(1.02);
+  transform-origin: center center;
 }
 
 .comment-votes {

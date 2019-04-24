@@ -36,7 +36,11 @@ class ArticleSingle extends Component {
         {user ? <CommentSubmit addComment={this.addComment} /> : null}
         {comments.map(comment => {
           return (
-            <Comment key={comment.comment_id} comment={comment} user={user} />
+            <Comment
+              key={comment.comment_id}
+              comment={comment}
+              removeComment={this.removeComment}
+            />
           );
         })}
       </div>
@@ -78,6 +82,10 @@ class ArticleSingle extends Component {
     api.postComment(article_id, user.username, body).then(() => {
       this.fetchComments();
     });
+  };
+
+  removeComment = comment_id => {
+    api.deleteComment(comment_id).then(() => this.fetchComments());
   };
 }
 
