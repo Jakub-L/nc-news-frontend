@@ -15,15 +15,16 @@ class ArticleSingle extends Component {
     const {
       comments,
       loading,
-      article: { author, title, body, created_at, votes },
+      article: { article_id, author, title, body, created_at, votes },
     } = this.state;
+    const { user } = this.props;
     return loading ? (
       <p className="loading">Loading. . .</p>
     ) : (
       <div className="ArticleSingle">
         <div className="article">
           <div className="article-votes">
-            <Vote />
+            <Vote votes={votes} section="article" id={article_id} user={user} />
           </div>
           <div className="article-title">{title}</div>
           <div className="article-author-time">

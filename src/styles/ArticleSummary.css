@@ -1,7 +1,7 @@
 .ArticleSummary {
   margin: 0.5em 0em 0.5em 0em;
   display: grid;
-  grid-template-columns: 3em auto 1fr;
+  grid-template-columns: 4em auto 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
     'votes title title'
