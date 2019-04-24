@@ -34,7 +34,9 @@ class ArticleSingle extends Component {
         </div>
         <h2>Comments:</h2>
         {comments.map(comment => {
-          return <Comment key={comment.comment_id} comment={comment} />;
+          return (
+            <Comment key={comment.comment_id} comment={comment} user={user} />
+          );
         })}
       </div>
     );

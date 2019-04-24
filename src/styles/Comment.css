@@ -1,22 +1,19 @@
 .Comment {
   display: grid;
   grid-template-columns: 50px 1fr;
-  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
     'votes author'
     'votes time'
-    'body body';
-  padding: 1em;
+    'votes body';
+  padding: 1em 1em 1em 0.2em;
   margin: 0.5em 1em 0.5em 1em;
-  border: 1px solid pink;
+  background-color: var(--light-grey);
+  border-radius: 2em;
 }
 
 .comment-votes {
   grid-area: votes;
-  font-family: var(--header-font);
-  font-weight: 700;
-  font-size: 1.2em;
-  color: var(--dark-grey);
 }
 .comment-author {
   grid-area: author;
@@ -40,7 +37,10 @@
 }
 
 .comment-body {
+  margin-top: 0.5em;
+  padding-top: 0.5em;
   grid-area: body;
   font-family: var(--body-font);
   color: var(--dark-grey);
+  border-top: 1px solid var(--medium-grey);
 }

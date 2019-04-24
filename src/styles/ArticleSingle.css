@@ -12,6 +12,7 @@
 
 .ArticleSingle .article {
   margin: 1em;
+  margin-bottom: 2em;
   display: grid;
   grid-template-columns: 4em auto;
   grid-template-rows: 1fr 1fr auto;
