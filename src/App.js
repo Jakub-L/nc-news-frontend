@@ -7,20 +7,19 @@ import './styles/App.css';
 class App extends Component {
   state = {
     topics: [],
-    user: null,
     loginFailed: false,
   };
 
   render() {
-    const { topics, user, loginFailed } = this.state;
+    const { topics, loginFailed } = this.state;
     return (
       <div className="App">
         <Header />
-        <Nav topics={topics} user={user} logout={this.logout} />
+        <Nav topics={topics} logout={this.logout} />
         <Router className="MainContainer">
-          <ArticleList path="/" user={user} />
-          <ArticleList path="/topics/:topic" user={user} />
-          <ArticleSingle path="/articles/:article_id" user={user} />
+          <ArticleList path="/" />
+          <ArticleList path="/topics/:topic" />
+          <ArticleSingle path="/articles/:article_id" />
           <Auth path="/auth" login={this.login} loginFailed={loginFailed} />
         </Router>
       </div>
@@ -41,14 +40,16 @@ class App extends Component {
     api
       .getUserByUsername(username)
       .then(user => {
-        this.setState({ user, loginFailed: false });
+        sessionStorage.setItem('user', JSON.stringify(user));
+        this.setState({ loginFailed: false });
         navigate('/');
       })
       .catch(() => this.setState({ loginFailed: true }));
   };
 
   logout = () => {
-    this.setState({ user: null, loginFailed: false });
+    sessionStorage.removeItem('user');
+    this.setState({ loginFailed: false });
     navigate('/');
   };
 }

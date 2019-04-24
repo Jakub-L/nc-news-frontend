@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from '@reach/router';
 import '../styles/Nav.css';
 
-const Nav = ({ topics, user, logout }) => {
+const Nav = ({ topics, logout }) => {
+  const user = JSON.parse(sessionStorage.getItem('user'));
   return (
     <nav className="Nav">
       <Link to="/">Home</Link>

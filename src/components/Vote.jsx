@@ -9,7 +9,7 @@ class Vote extends Component {
   };
   render() {
     const { votes, sentVotes } = this.state;
-    const { user } = this.props;
+    const user = JSON.parse(sessionStorage.getItem('user'));
     return (
       <div className="Vote">
         <button
