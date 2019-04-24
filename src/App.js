@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Router } from '@reach/router';
-import { Header, ArticleSingle, ArticleList, Nav } from './components';
+import { Header, ArticleSingle, ArticleList, Nav, Auth } from './components';
 import * as api from './utils/api';
 import './styles/App.css';
 
@@ -19,6 +19,7 @@ class App extends Component {
           <ArticleList path="/" />
           <ArticleList path="/topics/:topic" />
           <ArticleSingle path="/articles/:article_id" />
+          <Auth path="/auth" />
         </Router>
       </div>
     );

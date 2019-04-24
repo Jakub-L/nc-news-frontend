@@ -1,0 +1,53 @@
+.Auth {
+  display: flex;
+  flex-direction: column;
+  margin: 2em auto;
+  padding: 0.5em;
+  min-width: 13em;
+  min-height: 13em;
+  width: 33%;
+  height: 20%;
+  border-radius: 2em;
+  background-color: var(--light-grey);
+}
+
+.Auth label {
+  text-align: center;
+  margin: auto 0 0 0;
+  font-family: var(--header-font);
+  font-weight: 500;
+  font-size: 1em;
+  color: var(--dark-grey);
+}
+
+.Auth button {
+  margin: 0 auto auto auto;
+  height: 1.5em;
+  width: 10em;
+  font-family: var(--header-font);
+  font-weight: 300;
+  font-size: 1em;
+  background: #ffffff;
+  border: 1px solid var(--medium-grey);
+  border-radius: 0.5em;
+}
+
+.Auth button:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  transform: scale(1.02);
+  transform-origin: center center;
+}
+
+.Auth input {
+  margin: 0.3em 0 1em 0;
+  height: 1.5em;
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 1em;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid var(--medium-grey);
+  border-radius: 0.5em;
+}

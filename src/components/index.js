@@ -5,6 +5,7 @@ import ArticleSummary from './ArticleSummary';
 import Comment from './Comment';
 import Header from './Header';
 import Nav from './Nav';
+import Auth from './Auth';
 
 export {
   ArticleSingle,
@@ -14,4 +15,5 @@ export {
   Comment,
   Header,
   Nav,
+  Auth,
 };
