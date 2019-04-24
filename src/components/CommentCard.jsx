@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Comment.css';
-import Vote from './Vote';
+import Vote from './Voter';
 
 const Comment = ({ comment, removeComment }) => {
   const { comment_id, votes, created_at, author, body } = comment;
