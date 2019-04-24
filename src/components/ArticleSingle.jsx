@@ -18,7 +18,7 @@ class ArticleSingle extends Component {
       article: { author, title, body, created_at, votes },
     } = this.state;
     return loading ? (
-      <p>Loading...</p>
+      <p className="loading">Loading. . .</p>
     ) : (
       <div className="ArticleSingle">
         <div className="article">

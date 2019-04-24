@@ -21,6 +21,8 @@ const Nav = ({ topics }) => {
           ))}
         </div>
       </div>
+      <Link to="/">Login</Link>
+      <Link to="/">Submit</Link>
     </nav>
   );
 };

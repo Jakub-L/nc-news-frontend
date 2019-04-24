@@ -22,7 +22,7 @@ class ArticleList extends Component {
           sortOrder={sortOrder}
         />
         {loading ? (
-          <p>Loading...</p>
+          <p className="loading">Loading . . .</p>
         ) : (
           articles.map(article => (
             <ArticleSummary key={article.article_id} article={article} />

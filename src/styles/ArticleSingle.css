@@ -41,3 +41,23 @@
   font-family: var(--body-font);
   color: var(--dark-grey);
 }
+
+.loading {
+  font-family: var(--header-font);
+  font-size: 1.5em;
+  text-align: center;
+  animation-name: breathe;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes breathe {
+  from {
+    color: var(--light-grey);
+  }
+  to {
+    color: var(--dark-grey);
+  }
+}
