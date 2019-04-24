@@ -7,6 +7,7 @@ import Header from './Header';
 import Nav from './Nav';
 import Auth from './Auth';
 import Vote from './Vote';
+import CommentSubmit from './CommentSubmit';
 
 export {
   ArticleSingle,
@@ -18,4 +19,5 @@ export {
   Nav,
   Auth,
   Vote,
+  CommentSubmit,
 };

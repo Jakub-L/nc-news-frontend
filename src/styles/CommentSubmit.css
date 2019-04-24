@@ -1,0 +1,39 @@
+.CommentSubmit {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 1em 0.5em 1em;
+  align-items: center;
+}
+
+.CommentSubmit textarea {
+  border: 1px solid var(--medium-grey);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  font-family: var(--body-font);
+  font-size: 1em;
+  color: var(--dark-grey);
+  width: 80%;
+}
+.CommentSubmit textarea:focus {
+  outline: none;
+}
+
+.CommentSubmit button {
+  margin: 0.5em auto auto auto;
+  height: 1.5em;
+  width: 10em;
+  font-family: var(--header-font);
+  font-weight: 300;
+  font-size: 1em;
+  background: #ffffff;
+  border: 1px solid var(--medium-grey);
+  border-radius: 0.5em;
+}
+
+.CommentSubmit button:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  transform: scale(1.02);
+  transform-origin: center center;
+}

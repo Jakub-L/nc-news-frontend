@@ -33,7 +33,7 @@ class ArticleSingle extends Component {
           <div className="article-body">{body}</div>
         </div>
         <h2>Comments:</h2>
-          {user ? <CommentSubmit /> : null}
+        {user ? <CommentSubmit addComment={this.addComment} /> : null}
         {comments.map(comment => {
           return (
             <Comment key={comment.comment_id} comment={comment} user={user} />
@@ -62,7 +62,21 @@ class ArticleSingle extends Component {
   fetchComments = () => {
     const { article_id } = this.props;
     api.getCommentsByArticle(article_id).then(comments => {
+      comments = comments.map(comment => {
+        return {
+          ...comment,
+          created_at: data.convertArticleDate(comment.created_at),
+        };
+      });
       this.setState({ comments });
+    });
+  };
+
+  addComment = body => {
+    const { article_id } = this.props;
+    const user = JSON.parse(sessionStorage.getItem('user'));
+    api.postComment(article_id, user.username, body).then(() => {
+      this.fetchComments();
     });
   };
 }
