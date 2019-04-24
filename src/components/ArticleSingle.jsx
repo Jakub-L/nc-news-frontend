@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Comment } from './index';
+import { Comment, Vote } from './index';
 import * as api from '../utils/api';
 import * as data from '../utils/data';
 import '../styles/ArticleSingle.css';
@@ -22,7 +22,9 @@ class ArticleSingle extends Component {
     ) : (
       <div className="ArticleSingle">
         <div className="article">
-          <div className="article-votes">{votes}</div>
+          <div className="article-votes">
+            <Vote />
+          </div>
           <div className="article-title">{title}</div>
           <div className="article-author-time">
             By {author} on {created_at}

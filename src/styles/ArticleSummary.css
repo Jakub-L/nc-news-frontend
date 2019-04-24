@@ -13,13 +13,8 @@
 
 .article-votes {
   grid-area: votes;
-  margin: auto 0;
-  font-family: var(--header-font);
-  font-weight: 700;
-  font-size: 2em;
-  text-align: center;
-  color: var(--dark-grey);
 }
+
 .article-title {
   grid-area: title;
   margin: 0.2em 0.4em 0.2em 0;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from '@reach/router';
 import '../styles/Nav.css';
 
-const Nav = ({ topics }) => {
+const Nav = ({ topics, user, logout }) => {
   return (
     <nav className="Nav">
       <Link to="/">Home</Link>
@@ -21,8 +21,14 @@ const Nav = ({ topics }) => {
           ))}
         </div>
       </div>
-      <Link to="/">Login</Link>
-      <Link to="/">Submit</Link>
+      {user ? (
+        <button onClick={logout}>
+          Logout<br />
+          <span>({user.username})</span>
+        </button>
+      ) : (
+        <Link to="/auth">Login</Link>
+      )}
     </nav>
   );
 };

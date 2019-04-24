@@ -16,10 +16,6 @@
 
 .article-votes {
   grid-area: votes;
-  font-family: var(--header-font);
-  font-weight: 700;
-  font-size: 2em;
-  color: var(--dark-grey);
 }
 .article-title {
   grid-area: title;

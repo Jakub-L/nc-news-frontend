@@ -14,6 +14,7 @@ class ArticleList extends Component {
 
   render() {
     const { articles, loading, sortOrder } = this.state;
+    const { user } = this.props;
     return (
       <div className="ArticleList">
         <ArticleSort
@@ -25,7 +26,11 @@ class ArticleList extends Component {
           <p className="loading">Loading . . .</p>
         ) : (
           articles.map(article => (
-            <ArticleSummary key={article.article_id} article={article} />
+            <ArticleSummary
+              key={article.article_id}
+              article={article}
+              user={user}
+            />
           ))
         )}
       </div>

@@ -8,7 +8,7 @@ export const getTopics = async () => {
 
 export const getArticles = async (topic, sortBy, sortOrder) => {
   const { data } = await axios.get(
-    `${BASE_URL}/articles?sort_by=${sortBy}&order=${sortOrder}${
+    `${BASE_URL}/articles?limit=50&sort_by=${sortBy}&order=${sortOrder}${
       topic ? `&topic=${topic}` : ''
     }`
   );
@@ -25,4 +25,16 @@ export const getCommentsByArticle = async article_id => {
     `${BASE_URL}/articles/${article_id}/comments`
   );
   return data.comments;
+};
+
+export const getUserByUsername = async username => {
+  const { data } = await axios.get(`${BASE_URL}/users/${username}`);
+  return data.user;
+};
+
+export const vote = async (inc_votes, id, section) => {
+  const { data } = await axios.patch(`${BASE_URL}/${section}s/${id}`, {
+    inc_votes,
+  });
+  return data[section];
 };

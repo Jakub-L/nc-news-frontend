@@ -11,6 +11,15 @@
   background-color: var(--light-grey);
 }
 
+.Auth p {
+  text-align: center;
+  margin: 0;
+  font-family: var(--header-font);
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
 .Auth label {
   text-align: center;
   margin: auto 0 0 0;
@@ -21,7 +30,7 @@
 }
 
 .Auth button {
-  margin: 0 auto auto auto;
+  margin: 0.5em auto auto auto;
   height: 1.5em;
   width: 10em;
   font-family: var(--header-font);
@@ -41,7 +50,7 @@
 }
 
 .Auth input {
-  margin: 0.3em 0 1em 0;
+  margin: 0.3em 0 0.5em 0;
   height: 1.5em;
   font-family: var(--body-font);
   font-weight: 400;
@@ -50,4 +59,21 @@
   background: #ffffff;
   border: 1px solid var(--medium-grey);
   border-radius: 0.5em;
+}
+
+.login-fail {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  animation-name: error;
+  animation-duration: 100ms;
+  animation-iteration-count: 3;
+}
+
+@keyframes error {
+  0% {
+    transform: translateX(-3px);
+  }
+  66% {
+    transform: translateX(3px);
+  }
 }

@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Vote } from './index';
 import { Link } from '@reach/router';
 import '../styles/ArticleSummary.css';
 
-const ArticleSummary = ({ article }) => {
+const ArticleSummary = ({ article, user }) => {
   return (
     <div className="ArticleSummary">
-      <div className="article-votes">{article.votes}</div>
+      <div className="article-votes">
+        <Vote
+          votes={article.votes}
+          section="article"
+          id={article.article_id}
+          user={user}
+        />
+      </div>
       <Link to={`/articles/${article.article_id}`} className="article-title">
         {article.title}
       </Link>
