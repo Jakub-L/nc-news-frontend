@@ -1,68 +1,92 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NC News
 
-## Available Scripts
+React app for a website serving articles and comments.
 
-In the project directory, you can run:
+# Table of Contents
 
-### `npm start`
+- [Getting Started](#getting-started)
+- [— Installation](#installation)
+- [Testing](#testing)
+- [- Unit Testing](#unit-testing)
+- [- Integration Testing](#integration-testing)
+- [Deployment](#deployment)
+- [API](#api)
+- [Available Scripts](#available-scripts)
+- [Built With](#built-with)
+- [Authors](#authors)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Getting Started
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+These instructions will get you a copy of the project running on your local machine. This is for testing and development only; for production see [deployment](#deployment)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone this repository:
 
-### `npm run build`
+```
+git clone https://github.com/Jakub-L/nc-news-frontend.git
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install the package dependencies:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the development server:
 
-### `npm run eject`
+```
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The website can now be reached at localhost on port 3000.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Testing
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Unit Testing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Unit testing is done via React's in-built [Jest](https://jestjs.io/) testing suite.
+In order to run the automated unit tests for utility functions, run the following command:
 
-## Learn More
+```
+npm test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Integration Testing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Integration and end-to-end testing is managed via [Cypress](https://www.cypress.io/). In order to run the tests, run the following command:
 
-### Code Splitting
+```
+npm run cy:open
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+This will open Cypress and allow for running of the tests.
 
-### Analyzing the Bundle Size
+# Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+The app is [hosted on Netlify](https://nc-news-jakub.netlify.com/).
 
-### Making a Progressive Web App
+# API
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+The app uses a separate back-end to serve its data.
 
-### Advanced Configuration
+The [repository](https://github.com/Jakub-L/nc-news-api) is hosted on GitHub, and the [live version](https://nc-news-jakub.herokuapp.com/) is hosted on Heroku
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+# Available Scripts
 
-### Deployment
+- **`npm start`** - initialise the local development server,
+- **`npm run build`** - build the app into the `build` folder,
+- **`npm test`** - run the Jest test suite for unit testing,
+- **`npm eject`** - remove single-build dependency from project,
+- **`npm run cy:open`** - open cypress for end-to-end testing
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+# Built With
 
-### `npm run build` fails to minify
+- **[React](https://reactjs.org/)**: basic library,
+- **[Axios](https://github.com/axios/axios)**: request library used for API calls,
+- **[Reach Router](https://reach.tech/router)**: route management,
+- **[Cypres](https://www.cypress.io/)**: end-to-end testing,
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# Authors
+
+- **[Jakub-L](https://github.com/Jakub-L)**: Initial work
