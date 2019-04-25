@@ -13,14 +13,18 @@ class Voter extends Component {
     return (
       <div className="Voter">
         <button
+          className="vote-button"
           id="up-vote"
           disabled={sentVotes === 1 || !user}
           onClick={() => this.vote(1)}
         >
           ▲
         </button>
-        <div id="votes">{votes + sentVotes}</div>
+        <div className="heading" id="votes">
+          {votes + sentVotes}
+        </div>
         <button
+          className="vote-button"
           id="down-vote"
           disabled={sentVotes === -1 || !user}
           onClick={() => this.vote(-1)}

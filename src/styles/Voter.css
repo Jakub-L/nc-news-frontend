@@ -3,33 +3,13 @@
   flex-direction: column;
 }
 
-.Voter #votes {
-  margin: 0;
-  padding: 0;
-  font-family: var(--header-font);
-  font-weight: bold;
-  font-size: 1.2em;
+#votes {
   text-align: center;
+  color: var(--dark-grey);
 }
 
-.Voter button {
-  margin: 0;
+.vote-button {
   padding: 0;
-  text-align: center;
-  font-family: var(--body-font);
-  font-size: 0.9em;
   border: none;
   background-color: rgba(0, 0, 0, 0);
-}
-
-.Voter button:hover {
-  color: var(--primary-color);
-}
-
-.Voter button:disabled {
-  color: var(--medium-grey);
-}
-
-.Voter button:focus {
-  outline: none;
 }
