@@ -22,7 +22,7 @@ class Auth extends Component {
           onFocus={this.clearUsernameIfDefault}
           onBlur={this.setDefaultIfEmpty}
         />
-        {loginFailed ? <p>Login failed!</p> : null}
+        {loginFailed ? <p id="login-fail-warning">Login failed!</p> : null}
         <button type="submit">Log in!</button>
       </form>
     );
