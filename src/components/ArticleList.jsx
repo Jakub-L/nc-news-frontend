@@ -16,7 +16,7 @@ class ArticleList extends Component {
     const { articles, loading, sortOrder } = this.state;
     return (
       <div className="ArticleList">
-        <h2 className="heading">NCNews/{this.props.topic || 'all'}</h2>
+        <h2 className="heading" id="topic-heading">NCNews/{this.props.topic || 'all'}</h2>
         <ArticleSort
           updateSortCategory={this.updateSortCategory}
           updateSortOrder={this.updateSortOrder}
