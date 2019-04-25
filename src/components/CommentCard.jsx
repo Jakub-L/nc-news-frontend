@@ -13,7 +13,7 @@ const CommentCard = ({ comment, removeComment }) => {
       </div>
       <div className="comment-author">{author}</div>
       <div className="comment-time">{created_at}</div>
-      {storedUser.username === author ? (
+      {storedUser && storedUser.username === author ? (
         <button
           className="comment-delete"
           onClick={() => {
