@@ -13,3 +13,8 @@
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
+
+.vote-button:hover {
+  transform: none;
+  border: none;
+}

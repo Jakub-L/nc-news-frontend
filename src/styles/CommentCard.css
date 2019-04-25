@@ -16,12 +16,6 @@
   grid-area: delete;
   height: 1.5em;
   width: 5em;
-  margin: auto;
-}
-.comment-delete-button:hover {
-  border: 1px solid var(--primary-color);
-  transform: scale(1.02);
-  transform-origin: center center;
 }
 .comment-votes {
   grid-area: votes;

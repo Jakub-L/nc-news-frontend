@@ -25,3 +25,7 @@
 .sort-button {
   border-radius: 0.1em 0.5em 0.5em 0.1em;
 }
+
+.sort-button:hover {
+  border-color: var(--medium-grey);
+}

@@ -12,6 +12,10 @@
   line-height: 0.85em;
 }
 
+.Nav button:hover {
+  border: none;
+}
+
 .nav-link {
   min-width: 5.5em;
   margin: auto 0;
