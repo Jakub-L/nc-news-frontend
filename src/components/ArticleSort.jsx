@@ -15,7 +15,11 @@ const ArticleSort = ({ updateSortCategory, updateSortOrder, sortOrder }) => {
         <option value="comment_count">Comment count</option>
         <option value="votes">Votes</option>
       </select>
-      <button className="sort-button" onClick={updateSortOrder}>
+      <button
+        className="sort-button"
+        onClick={updateSortOrder}
+        title={sortOrder === 'asc' ? 'Sort descending' : 'Sort ascending'}
+      >
         {sortOrder === 'asc' ? '▲' : '▼'}
       </button>
     </div>
