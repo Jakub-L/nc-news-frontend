@@ -23,3 +23,12 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('clearSessionStorage', () => {
+  cy.window().then(win => win.sessionStorage.clear());
+})
+
+Cypress.Commands.add('stub', () => {
+  cy.server()
+  cy.route('*/topics', 'fx:topics.json');
+})
