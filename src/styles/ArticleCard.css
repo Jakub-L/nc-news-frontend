@@ -24,12 +24,10 @@
   margin: auto 0.4em auto 0;
   text-decoration: none;
 }
-.article-title:hover {
-  transform: scale(1.02);
-  transform-origin: left center;
-}
+
 .article-votes {
   grid-area: votes;
+  margin: auto 0;
 }
 .article-author {
   grid-area: author;
