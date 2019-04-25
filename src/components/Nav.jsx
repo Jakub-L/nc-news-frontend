@@ -5,6 +5,7 @@ import '../styles/Nav.css';
 
 const Nav = ({ topics, logout }) => {
   const user = JSON.parse(sessionStorage.getItem('user'));
+  let origin = { path: window.location.pathname };
   return (
     <nav className="Nav">
       <Link to="/" className="nav-link">
@@ -31,7 +32,12 @@ const Nav = ({ topics, logout }) => {
           <span className="nav-link-subheading">({user.username})</span>
         </button>
       ) : (
-        <Link to="/auth" className="nav-link">
+        <Link
+          to="/auth"
+          className="nav-link"
+          onClick={() => (origin.path = window.location.pathname)}
+          state={origin}
+        >
           Login
         </Link>
       )}

@@ -41,8 +41,12 @@ class Auth extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    const {
+      location: { state },
+    } = this.props;
+    const path = state ? state.path : '/';
     const { username } = event.target;
-    this.props.login(username.value);
+    this.props.login(username.value, path);
   };
 
   setDefaultIfEmpty = () => {

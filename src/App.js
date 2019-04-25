@@ -44,13 +44,13 @@ class App extends Component {
     });
   };
 
-  login = username => {
+  login = (username, path) => {
     api
       .getUserByUsername(username)
       .then(user => {
         sessionStorage.setItem('user', JSON.stringify(user));
         this.setState({ loginFailed: false });
-        navigate('/');
+        navigate(path);
       })
       .catch(() => this.setState({ loginFailed: true }));
   };
@@ -58,7 +58,6 @@ class App extends Component {
   logout = () => {
     sessionStorage.removeItem('user');
     this.setState({ loginFailed: false });
-    navigate('/');
   };
 }
 
