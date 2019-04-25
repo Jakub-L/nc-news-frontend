@@ -44,6 +44,13 @@
   color: var(--dark-grey);
 }
 
+.body {
+  font-family: var(--body-font);
+  font-size: 1em;
+  line-height: 1.75em;
+  color: var(--dark-grey);
+}
+
 .loading {
   font-family: var(--header-font);
   font-size: 1.5em;

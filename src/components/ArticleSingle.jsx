@@ -26,13 +26,15 @@ class ArticleSingle extends Component {
           <div className="article-votes">
             <Voter votes={votes} section="article" id={article_id} />
           </div>
-          <div className="article-title">{title}</div>
-          <div className="article-author-time">
+          <div className="article-title heading">{title}</div>
+          <div className="article-author-time subheading">
             By {author} on {created_at}
           </div>
-          <div className="article-body">{body}</div>
+          <div className="article-body body">{body}</div>
         </div>
-        <h2>Comments:</h2>
+        <h2 className="heading" id="comments-section-header">
+          Comments:
+        </h2>
         {user ? <CommentSubmit addComment={this.addComment} /> : null}
         {comments.map(comment => {
           return (
