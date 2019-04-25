@@ -6,62 +6,34 @@
     'votes author delete'
     'votes time delete'
     'votes body body';
-  padding: 1em 1em 1em 0.2em;
-  margin: 0.5em 1em 0.5em 1em;
+  padding: 1em;
+  padding-left: 0.2em;
+  margin: 0.5em 1em;
   background-color: var(--light-grey);
   border-radius: 2em;
 }
-
-.comment-delete {
+.comment-delete-button {
   grid-area: delete;
-  margin: auto;
   height: 1.5em;
   width: 5em;
-  font-family: var(--header-font);
-  font-weight: 300;
-  font-size: 1em;
-  background: #ffffff;
-  border: 1px solid var(--medium-grey);
-  border-radius: 0.5em;
+  margin: auto;
 }
-
-.comment-delete:hover {
+.comment-delete-button:hover {
   border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-  font-weight: bold;
   transform: scale(1.02);
   transform-origin: center center;
 }
-
 .comment-votes {
   grid-area: votes;
 }
 .comment-author {
   grid-area: author;
-  font-family: var(--body-font);
-  font-weight: 300;
-  font-style: italic;
-  font-size: 0.8em;
-  color: var(--dark-grey);
 }
 .comment-time {
   grid-area: time;
 }
-
-.comment-author,
-.comment-time {
-  font-family: var(--body-font);
-  font-weight: 300;
-  font-style: italic;
-  font-size: 0.8em;
-  color: var(--dark-grey);
-}
-
 .comment-body {
-  margin-top: 0.5em;
-  padding-top: 0.5em;
   grid-area: body;
-  font-family: var(--body-font);
-  color: var(--dark-grey);
+  margin-top: 0.5em;
   border-top: 1px solid var(--medium-grey);
 }

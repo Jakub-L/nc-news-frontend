@@ -84,6 +84,7 @@ button {
 }
 
 button:hover {
+  font-weight: bold;
   color: var(--primary-color);
 }
 

@@ -11,11 +11,11 @@ const CommentCard = ({ comment, removeComment }) => {
       <div className="comment-votes">
         <Voter votes={votes} section="comment" id={comment_id} />
       </div>
-      <div className="comment-author">{author}</div>
-      <div className="comment-time">{created_at}</div>
+      <div className="comment-author subheading">{author}</div>
+      <div className="comment-time subheading">{created_at}</div>
       {storedUser && storedUser.username === author ? (
         <button
-          className="comment-delete"
+          className="comment-delete-button"
           onClick={() => {
             removeComment(comment_id);
           }}
@@ -23,7 +23,7 @@ const CommentCard = ({ comment, removeComment }) => {
           Delete
         </button>
       ) : null}
-      <div className="comment-body">{body}</div>
+      <div className="comment-body body">{body}</div>
     </div>
   );
 };
