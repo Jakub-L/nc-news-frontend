@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { navigate } from '@reach/router';
 import { CommentCard, Voter, CommentSubmit } from './index';
 import * as api from '../utils/api';
 import * as data from '../utils/data';
@@ -56,26 +57,36 @@ class ArticleSingle extends Component {
 
   fetchArticle = () => {
     const { article_id } = this.props;
-    api.getArticleByID(article_id).then(article => {
-      article = {
-        ...article,
-        created_at: data.convertArticleDate(article.created_at),
-      };
-      this.setState({ article, loading: false });
-    });
+    api
+      .getArticleByID(article_id)
+      .then(article => {
+        article = {
+          ...article,
+          created_at: data.convertArticleDate(article.created_at),
+        };
+        this.setState({ article, loading: false });
+      })
+      .catch(() => {
+        navigate('/error/404', { replace: true });
+      });
   };
 
   fetchComments = () => {
     const { article_id } = this.props;
-    api.getCommentsByArticle(article_id).then(comments => {
-      comments = comments.map(comment => {
-        return {
-          ...comment,
-          created_at: data.convertArticleDate(comment.created_at),
-        };
+    api
+      .getCommentsByArticle(article_id)
+      .then(comments => {
+        comments = comments.map(comment => {
+          return {
+            ...comment,
+            created_at: data.convertArticleDate(comment.created_at),
+          };
+        });
+        this.setState({ comments });
+      })
+      .catch(() => {
+        navigate('/error/404', { replace: true });
       });
-      this.setState({ comments });
-    });
   };
 
   addComment = body => {

@@ -3,6 +3,7 @@ import { ArticleCard, ArticleSort } from './index';
 import * as data from '../utils/data';
 import * as api from '../utils/api';
 import '../styles/ArticleList.css';
+import { navigate } from '@reach/router';
 
 class ArticleList extends Component {
   state = {
@@ -16,7 +17,9 @@ class ArticleList extends Component {
     const { articles, loading, sortOrder } = this.state;
     return (
       <div className="ArticleList">
-        <h2 className="heading" id="topic-heading">NCNews/{this.props.topic || 'all'}</h2>
+        <h2 className="heading" id="topic-heading">
+          NCNews/{this.props.topic || 'all'}
+        </h2>
         <ArticleSort
           updateSortCategory={this.updateSortCategory}
           updateSortOrder={this.updateSortOrder}
@@ -59,6 +62,8 @@ class ArticleList extends Component {
         };
       });
       this.setState({ articles, loading: false });
+    }).catch(() => {
+      navigate('/error/404', { replace: true });
     });
   };
 
