@@ -8,16 +8,18 @@ import Nav from './Nav';
 import Auth from './Auth';
 import Voter from './Voter';
 import CommentSubmit from './CommentSubmit';
+import Error from './Error';
 
 export {
   ArticleSingle,
   ArticleList,
   ArticleSort,
   ArticleCard,
+  Auth,
   CommentCard,
+  CommentSubmit,
+  Error,
   Header,
   Nav,
-  Auth,
   Voter,
-  CommentSubmit,
 };

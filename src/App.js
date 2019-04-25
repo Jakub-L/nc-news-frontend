@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import { Router, navigate } from '@reach/router';
-import { Header, ArticleSingle, ArticleList, Nav, Auth } from './components';
+import {
+  Header,
+  ArticleSingle,
+  ArticleList,
+  Nav,
+  Auth,
+  Error,
+} from './components';
 import * as api from './utils/api';
 import './styles/App.css';
 
@@ -21,6 +28,7 @@ class App extends Component {
           <ArticleList path="/topics/:topic" />
           <ArticleSingle path="/articles/:article_id" />
           <Auth path="/auth" login={this.login} loginFailed={loginFailed} />
+          <Error default />
         </Router>
       </div>
     );
