@@ -27,6 +27,14 @@ describe('Auth', () => {
       .blur()
       .should('have.value', 'tickle122');
   });
+  it('Takes user to the previous page they were on after login', () => {
+    cy.visit('/articles/10');
+    cy.get('[data-cy=login-link]').click();
+    cy.get('button')
+      .contains('Log in')
+      .click();
+    cy.url().should('equal', `${BASE_URL}/articles/10`);
+  });
   it('Fails login with invalid username and displays notification', () => {
     cy.get('input#username').type('invalid');
     cy.get('button')

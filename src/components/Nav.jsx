@@ -37,6 +37,7 @@ const Nav = ({ topics, logout }) => {
           className="nav-link"
           onClick={() => (origin.path = window.location.pathname)}
           state={origin}
+          data-cy="login-link"
         >
           Login
         </Link>
