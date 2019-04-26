@@ -94,8 +94,10 @@ class ArticleSingle extends Component {
     const user = JSON.parse(sessionStorage.getItem('user'));
     api
       .postComment(article_id, user.username, body)
-      .then(() => {
-        this.fetchComments();
+      .then(comment => {
+        this.setState(state => {
+          return { comments: [comment, ...state.comments] };
+        });
       })
       .catch(({ response }) => {
         navigate(`/error/${response.status}`, { replace: true });
@@ -103,6 +105,13 @@ class ArticleSingle extends Component {
   };
 
   removeComment = comment_id => {
+    this.setState(state => {
+      return {
+        comments: state.comments.filter(
+          comment => comment.comment_id !== comment_id
+        ),
+      };
+    });
     api
       .deleteComment(comment_id)
       .then(() => this.fetchComments())

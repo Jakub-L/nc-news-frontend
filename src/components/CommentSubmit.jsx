@@ -39,7 +39,7 @@ class CommentSubmit extends Component {
     event.preventDefault();
     const { value } = event.target.comment;
     if (value.length) {
-      // this.props.addComment(value);
+      this.props.addComment(value);
       this.setState({ comment: '' });
     } else {
       this.setState({ submitFail: true });

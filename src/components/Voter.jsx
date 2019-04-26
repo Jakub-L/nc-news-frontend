@@ -47,9 +47,7 @@ class Voter extends Component {
     this.setState(state => {
       return { sentVotes: state.sentVotes + inc_votes };
     });
-    api.vote(inc_votes, id, section).catch(({ response }) => {
-      navigate(`/error/${response.status}`, { replace: true });
-    });
+    api.vote(inc_votes, id, section);
   };
 }
 

@@ -68,8 +68,4 @@ class Nav extends Component {
   };
 }
 
-Nav.propTypes = {
-  topics: PropTypes.array.isRequired,
-};
-
 export default Nav;
