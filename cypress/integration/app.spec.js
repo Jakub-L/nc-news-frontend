@@ -60,7 +60,7 @@ describe('Auth', () => {
   beforeEach(() => {
     cy.clearSessionStorage();
     cy.stub();
-    cy.visit('/auth');
+    cy.visit('/login');
   });
   it('Username input contains default username and allows logging in with it', () => {
     cy.get('input#username').should('have.value', 'tickle122');

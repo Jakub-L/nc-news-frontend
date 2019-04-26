@@ -33,7 +33,7 @@ const Nav = ({ topics, logout }) => {
         </button>
       ) : (
         <Link
-          to="/auth"
+          to="/login"
           className="nav-link"
           onClick={() => (origin.path = window.location.pathname)}
           state={origin}
