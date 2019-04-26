@@ -30,7 +30,8 @@ class Auth extends Component {
 
   componentDidMount() {
     const { defaultUsername } = this.state;
-
+    const { logout } = this.props;
+    logout();
     this.setState({ username: defaultUsername });
   }
 

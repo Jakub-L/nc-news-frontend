@@ -27,7 +27,7 @@ class App extends Component {
           <ArticleList path="/" />
           <ArticleList path="/topics/:topic" />
           <ArticleSingle path="/articles/:article_id" />
-          <Auth path="/login" login={this.login} loginFailed={loginFailed} />
+          <Auth path="/login" login={this.login} logout={this.logout} loginFailed={loginFailed} />
           <Error default />
         </Router>
       </div>
