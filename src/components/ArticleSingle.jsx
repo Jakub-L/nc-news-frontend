@@ -66,8 +66,8 @@ class ArticleSingle extends Component {
         };
         this.setState({ article, loading: false });
       })
-      .catch(() => {
-        navigate('/error/404', { replace: true });
+      .catch(({ response }) => {
+        navigate(`/error/${response.status}`, { replace: true });
       });
   };
 
@@ -84,21 +84,31 @@ class ArticleSingle extends Component {
         });
         this.setState({ comments });
       })
-      .catch(() => {
-        navigate('/error/404', { replace: true });
+      .catch(({ response }) => {
+        navigate(`/error/${response.status}`, { replace: true });
       });
   };
 
   addComment = body => {
     const { article_id } = this.props;
     const user = JSON.parse(sessionStorage.getItem('user'));
-    api.postComment(article_id, user.username, body).then(() => {
-      this.fetchComments();
-    });
+    api
+      .postComment(article_id, user.username, body)
+      .then(() => {
+        this.fetchComments();
+      })
+      .catch(({ response }) => {
+        navigate(`/error/${response.status}`, { replace: true });
+      });
   };
 
   removeComment = comment_id => {
-    api.deleteComment(comment_id).then(() => this.fetchComments());
+    api
+      .deleteComment(comment_id)
+      .then(() => this.fetchComments())
+      .catch(({ response }) => {
+        navigate(`/error/${response.status}`, { replace: true });
+      });
   };
 }
 

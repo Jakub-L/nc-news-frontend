@@ -54,17 +54,20 @@ class ArticleList extends Component {
     const { topic } = this.props;
     const { sortBy, sortOrder } = this.state;
     this.setState({ loading: true });
-    api.getArticles(topic, sortBy, sortOrder).then(articles => {
-      articles = articles.map(article => {
-        return {
-          ...article,
-          created_at: data.convertArticleDate(article.created_at),
-        };
+    api
+      .getArticles(topic, sortBy, sortOrder)
+      .then(articles => {
+        articles = articles.map(article => {
+          return {
+            ...article,
+            created_at: data.convertArticleDate(article.created_at),
+          };
+        });
+        this.setState({ articles, loading: false });
+      })
+      .catch(({ response }) => {
+        navigate(`/error/${response.status}`, { replace: true });
       });
-      this.setState({ articles, loading: false });
-    }).catch(() => {
-      navigate('/error/404', { replace: true });
-    });
   };
 
   updateSortCategory = sortCategory => {

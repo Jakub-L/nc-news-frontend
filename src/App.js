@@ -27,7 +27,12 @@ class App extends Component {
           <ArticleList path="/" />
           <ArticleList path="/topics/:topic" />
           <ArticleSingle path="/articles/:article_id" />
-          <Auth path="/login" login={this.login} logout={this.logout} loginFailed={loginFailed} />
+          <Auth
+            path="/login"
+            login={this.login}
+            logout={this.logout}
+            loginFailed={loginFailed}
+          />
           <Error default />
         </Router>
       </div>
@@ -39,9 +44,14 @@ class App extends Component {
   }
 
   fetchTopics = () => {
-    api.getTopics().then(topics => {
-      this.setState({ topics });
-    });
+    api
+      .getTopics()
+      .then(topics => {
+        this.setState({ topics });
+      })
+      .catch(({ response }) => {
+        navigate(`/error/${response.status}`, { replace: true });
+      });
   };
 
   login = (username, path) => {

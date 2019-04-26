@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { navigate } from '@reach/router';
 import * as api from '../utils/api';
 import '../styles/Voter.css';
 
@@ -46,7 +47,9 @@ class Voter extends Component {
     this.setState(state => {
       return { sentVotes: state.sentVotes + inc_votes };
     });
-    api.vote(inc_votes, id, section);
+    api.vote(inc_votes, id, section).catch(({ response }) => {
+      navigate(`/error/${response.status}`, { replace: true });
+    });
   };
 }
 
