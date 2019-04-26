@@ -4,7 +4,7 @@
   grid-area: nav;
   display: flex;
   background-color: var(--light-grey);
-  justify-content: center;
+  justify-content: space-evenly;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -41,8 +41,19 @@
   outline: none;
 }
 
-.nav-link-subheading {
-  font-size: 0.7em;
+.nav-logout-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logout {
+  display: block;
+}
+
+.nav-logout-subheading {
+  font-size: 1em;
+  margin-left: 0.2em;
+  display: block;
 }
 
 .dropdown-list {
@@ -58,4 +69,15 @@
 
 .dropdown-container:hover .dropdown-list {
   display: block;
+}
+
+@media (max-width: 500px) {
+  .nav-logout-container {
+    flex-direction: column;
+  }
+  .nav-logout-subheading {
+    font-size: 0.8em;
+    margin-left: 0;
+    display: block;
+  }
 }

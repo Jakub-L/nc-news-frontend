@@ -19,7 +19,6 @@
 .article-author,
 .article-comments {
   margin-bottom: 0.5em;
-  padding: 0 1em 0em 1em;
 }
 .article-title {
   grid-area: title;
@@ -34,13 +33,45 @@
 }
 .article-author {
   grid-area: author;
+  padding-right: 1em;
 }
 .article-time {
   grid-area: time;
+  padding: 0 1em 0em 1em;
   border-left: 1px solid var(--medium-grey);
   border-right: 1px solid var(--medium-grey);
 }
 
 .article-comments {
   grid-area: comments;
+  padding-left: 1em;
+}
+
+@media (max-width: 550px) {
+  .ArticleCard {
+    grid-template-columns: 4em auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      'votes title'
+      'votes author'
+      'votes time'
+      'votes comments';
+  }
+  .article-author,
+  .article-time,
+  .article-comments {
+    text-align: center;
+    margin: 0 1.5em 0 0;
+    padding: 0.1em 0;
+  }
+
+  .article-comments {
+    margin-bottom: 0.4em;
+  }
+
+  .article-time {
+    border: none;
+    border-top: 1px solid var(--medium-grey);
+    border-bottom: 1px solid var(--medium-grey);
+  }
 }

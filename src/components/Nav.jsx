@@ -33,10 +33,9 @@ class Nav extends Component {
           </div>
         </div>
         {user ? (
-          <button onClick={logout} className="nav-link">
-            Logout
-            <br />
-            <span className="nav-link-subheading">({user.username})</span>
+          <button onClick={logout} className="nav-link nav-logout-container">
+            <span className="nav-logout">Logout</span>
+            <span className="nav-logout-subheading">({user.username})</span>
           </button>
         ) : (
           <Link
