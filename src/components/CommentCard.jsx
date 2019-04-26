@@ -11,8 +11,7 @@ const CommentCard = ({ comment, removeComment }) => {
       <div className="comment-votes">
         <Voter votes={votes} section="comment" id={comment_id} />
       </div>
-      <div className="comment-author subheading">{author}</div>
-      <div className="comment-time subheading">{created_at}</div>
+      <div className="comment-author-time subheading">By {author} on {created_at}</div>
       {storedUser && storedUser.username === author ? (
         <button
           className="comment-delete-button"

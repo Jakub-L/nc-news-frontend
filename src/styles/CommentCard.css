@@ -1,10 +1,9 @@
 .CommentCard {
   display: grid;
   grid-template-columns: 4em auto 6em;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 1.5em auto;
   grid-template-areas:
     'votes author delete'
-    'votes time delete'
     'votes body body';
   padding: 1em;
   padding-left: 0.2em;
@@ -21,12 +20,11 @@
   margin: auto;
   grid-area: votes;
 }
-.comment-author {
+.comment-author-time {
   grid-area: author;
+  margin: auto 0;
 }
-.comment-time {
-  grid-area: time;
-}
+
 .comment-body {
   grid-area: body;
   margin-top: 0.5em;
