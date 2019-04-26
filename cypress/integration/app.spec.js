@@ -5,7 +5,7 @@ describe('Auth', () => {
     cy.clearSessionStorage();
     cy.stub();
     cy.visit('/auth');
-  })
+  });
   it('Username input contains default username and allows logging in with it', () => {
     cy.get('input#username').should('have.value', 'tickle122');
     cy.get('button')
@@ -26,5 +26,13 @@ describe('Auth', () => {
       .should('have.value', '')
       .blur()
       .should('have.value', 'tickle122');
-  })
+  });
+  it('Fails login with invalid username and displays notification', () => {
+    cy.get('input#username').type('invalid');
+    cy.get('button')
+      .contains('Log in')
+      .click();
+    cy.get('input#username').should('have.class', 'login-fail');
+    cy.get('p#login-fail-warning').should('exist');
+  });
 });

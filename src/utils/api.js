@@ -8,7 +8,7 @@ export const getTopics = async () => {
 
 export const getArticles = async (topic, sortBy, sortOrder) => {
   const { data } = await axios.get(
-    `${BASE_URL}/articles?limit=50&sort_by=${sortBy}&order=${sortOrder}${
+    `${BASE_URL}/articles?sort_by=${sortBy}&order=${sortOrder}${
       topic ? `&topic=${topic}` : ''
     }`
   );
