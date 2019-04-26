@@ -1,5 +1,6 @@
 .Nav {
   padding: 0.3em 0;
+  margin-bottom: 3px;
   grid-area: nav;
   display: flex;
   background-color: var(--light-grey);
