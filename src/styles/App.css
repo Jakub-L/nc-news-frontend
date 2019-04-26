@@ -104,7 +104,10 @@ button:disabled {
 }
 
 textarea {
+  min-height: 5em;
+  max-width: 50em;
   padding: 0.5em;
+  resize: vertical;
   font-family: var(--body-font);
   font-size: 1em;
   border: 1px solid var(--medium-grey);
