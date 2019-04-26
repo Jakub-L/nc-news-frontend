@@ -13,7 +13,6 @@ import './styles/App.css';
 
 class App extends Component {
   state = {
-    topics: [],
     loginFailed: false,
   };
 
@@ -38,21 +37,6 @@ class App extends Component {
       </div>
     );
   }
-
-  componentDidMount() {
-    this.fetchTopics();
-  }
-
-  fetchTopics = () => {
-    api
-      .getTopics()
-      .then(topics => {
-        this.setState({ topics });
-      })
-      .catch(({ response }) => {
-        navigate(`/error/${response.status}`, { replace: true });
-      });
-  };
 
   login = (username, path) => {
     api
