@@ -1,11 +1,11 @@
 .ArticleCard {
   margin: 0.5em 0em;
   display: grid;
-  grid-template-columns: 4em auto 1fr;
+  grid-template-columns: 4em auto auto 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-    'votes title title'
-    'votes author time';
+    'votes title title title'
+    'votes author time comments';
   border: 0px;
   border-radius: 3em 0.5em 0.5em 3em;
   background-color: var(--light-grey);
@@ -16,8 +16,10 @@
 }
 
 .article-time,
-.article-author {
-  margin: 0 1em 0.4em 0;
+.article-author,
+.article-comments {
+  margin-bottom: 0.5em;
+  padding: 0 1em 0em 1em;
 }
 .article-title {
   grid-area: title;
@@ -35,4 +37,10 @@
 }
 .article-time {
   grid-area: time;
+  border-left: 1px solid var(--medium-grey);
+  border-right: 1px solid var(--medium-grey);
+}
+
+.article-comments {
+  grid-area: comments;
 }

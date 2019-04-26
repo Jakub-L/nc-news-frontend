@@ -25,6 +25,9 @@ const ArticleCard = ({ article, user }) => {
       <div className="article-time subheading">
         Posted on {article.created_at}
       </div>
+      <div className="article-comments subheading">
+        {article.comment_count} comment{article.comment_count === 1 ? '' : 's'}
+      </div>
     </div>
   );
 };
