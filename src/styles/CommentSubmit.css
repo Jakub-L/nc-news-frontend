@@ -12,3 +12,12 @@
 .CommentSubmit button {
   margin-top: 0.5em;
 }
+
+.submit-fail {
+  border-color: var(--primary-color);
+  background-color: rgba(186, 31, 49, 0.1);
+  color: var(--primary-color);
+  animation-name: error-shake;
+  animation-duration: 100ms;
+  animation-iteration-count: 3;
+}
