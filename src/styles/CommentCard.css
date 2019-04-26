@@ -18,6 +18,7 @@
   width: 5em;
 }
 .comment-votes {
+  margin: auto;
   grid-area: votes;
 }
 .comment-author {
