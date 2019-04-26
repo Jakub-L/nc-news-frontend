@@ -1,0 +1,105 @@
+{
+  "total_count": "36",
+  "articles": [
+    {
+      "author": "weegembump",
+      "title": "Seafood substitutions are increasing",
+      "article_id": 33,
+      "body": "'SEAFOOD fraud is a serious global problem', begins a recent report from Oceana, an NGO. Reviewing over 200 studies in 55 countries, the report finds that one in five fish sold has been mislabelled. Although fish fraud is common early in the supply chain, most of it comes at the retail level. In 65% of cases, the motivation is economic—slippery restaurateurs frequently serve up cheaper fish than they advertise to cut costs. In America, Oceana has reported instances of tilapia being sold as the more expensive red snapper. Especially brazen fish criminals have invented new types of fish entirely. In Brazil, researchers were puzzled to find markets selling 'douradinha', ' non-existent species. Close inspection found that 60% of such fish were actually 'vulture' catfish, a relatively undesirable dish. Reports in America of catfish being substituted for more expensive fish date back to at least 2002; Oceana’s study suggests that the phenomenon is spreading.",
+      "topic": "cooking",
+      "created_at": "2018-05-30T15:59:13.341Z",
+      "votes": 7,
+      "comment_count": "7"
+    },
+    {
+      "author": "weegembump",
+      "title": "History of FC Barcelona",
+      "article_id": 16,
+      "body": "The history of Futbol Club Barcelona goes from the football club's founding in 1899 and up to current time. FC Barcelona, also known simply as Barcelona and familiarly as Barça, is based in Barcelona, Catalonia, Spain. The team was founded in 1899 by a group of Swiss, English and Spanish footballers led by Joan Gamper. The club played amateur football until 1910 in various regional competitions. In 1910, the club participated in their first of many European competitions, and has since amassed ten UEFA trophies and a sextuple. In 1928, Barcelona co-founded La Liga, the top-tier in Spanish football, along with a string of other clubs. As of 2016, Barcelona has never been relegated from La Liga, a record they share with Athletic Bilbao and arch-rival Real Madrid. The history of Barcelona has often been politically. Though it is a club created and run by foreigners, Barcelona gradually became a club associated with Catalan values. In Spain's transition to autocracy in 1925, Catalonia became increasingly hostile towards the central government in Madrid. The hostility enhanced Barcelona's image as a focal point for Catalonism, and when Francisco Franco banned the use of the Catalan language, the stadium of Barcelona became one of the few places the people could express their dissatisfaction. The Spanish transition to democracy in 1978 has not dampened the club's image of Catalan pride. In the 2000s – a period of sporting success in the club and an increased focus on Catalan players – club officials have openly called for Catalonia to become an independent state.",
+      "topic": "football",
+      "created_at": "2018-02-17T20:38:43.448Z",
+      "votes": 2,
+      "comment_count": "16"
+    },
+    {
+      "author": "cooljmessy",
+      "title": "Which current Premier League manager was the best player?",
+      "article_id": 17,
+      "body": "Premier League managers work with some of the top players in world football - but were they any good in their day? From European Cup and league title winners to one manager who only played at university, there's a diverse range of experience among the top-flight bosses. We've taken a look at the playing achievements and ability of the current Premier League managers and ranked them. Read on to see who ranks where...",
+      "topic": "football",
+      "created_at": "2016-07-12T21:43:31.740Z",
+      "votes": 1,
+      "comment_count": "12"
+    },
+    {
+      "author": "grumpy19",
+      "title": "JavaScript’s Apply, Call, and Bind Methods are Essential for JavaScript Professionals",
+      "article_id": 6,
+      "body": "Functions are objects in JavaScript, as you should know by now, if you have read any of the prerequisite articles. And as objects, functions have methods, including the powerful Apply, Call, and Bind methods. On the one hand, Apply and Call are nearly identical and are frequently used in JavaScript for borrowing methods and for setting the this value explicitly. We also use Apply for variable-arity functions; you will learn more about this in a bit.",
+      "topic": "coding",
+      "created_at": "2018-03-14T10:27:39.137Z",
+      "votes": 1,
+      "comment_count": "11"
+    },
+    {
+      "author": "cooljmessy",
+      "title": "Stone Soup",
+      "article_id": 35,
+      "body": "The first day I put my family on a Paleolithic diet, I made my kids fried eggs and sausage for breakfast. If they were still hungry, I told them, they could help themselves to more sausage, but they were not allowed to grab a slice of bread, or toast an English muffin, or pour themselves a bowl of cereal. This represented a reversal of the usual strictures, and they were happy to oblige. It was like some weird, unexpected holiday—Passover in July.",
+      "topic": "cooking",
+      "created_at": "2016-12-13T20:58:40.516Z",
+      "votes": 1,
+      "comment_count": "14"
+    },
+    {
+      "author": "cooljmessy",
+      "title": "An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET",
+      "article_id": 10,
+      "body": "When designing an application that will communicate with a remote computer, a data format and exchange protocol must be selected. There are a variety of open, standardized options, and the ideal choice depends on the applications requirements and pre-existing functionality. For example, SOAP-based web services format the data in an XML payload wrapped within a SOAP envelope. While XML works well for many application scenarios, it has some drawbacks that make it less than ideal for others. One such space where XML is often less than ideal is with Ajax-style web applications. Ajax is a technique used for building interactive web applications that provide a snappier user experience through the use of out-of-band, lightweight calls to the web server in lieu of full-page postbacks. These asynchronous calls are initiated on the client using JavaScript and involve formatting data, sending it to a web server, and parsing and working with the returned data. While most browsers can construct, send, and parse XML, JavaScript Object Notation (or JSON) provides a standardized data exchange format that is better-suited for Ajax-style web applications. JSON is an open, text-based data exchange format (see RFC 4627). Like XML, it is human-readable, platform independent, and enjoys a wide availability of implementations. Data formatted according to the JSON standard is lightweight and can be parsed by JavaScript implementations with incredible ease, making it an ideal data exchange format for Ajax web applications. Since it is primarily a data format, JSON is not limited to just Ajax web applications, and can be used in virtually any scenario where applications need to exchange or store structured information as text. This article examines the JSON standard, its relationship to JavaScript, and how it compares to XML. Jayrock, an open-source JSON implementation for .NET, is discussed and examples of creating and parsing JSON messages are provided in JavaScript and C#.",
+      "topic": "coding",
+      "created_at": "2016-10-29T02:24:09.225Z",
+      "votes": 0,
+      "comment_count": "8"
+    },
+    {
+      "author": "grumpy19",
+      "title": "The Notorious MSG’s Unlikely Formula For Success",
+      "article_id": 34,
+      "body": "The 'umami' craze has turned a much-maligned and misunderstood food additive into an object of obsession for the world’s most innovative chefs. But secret ingredient monosodium glutamate’s biggest secret may be that there was never anything wrong with it at all.",
+      "topic": "cooking",
+      "created_at": "2017-08-16T22:08:30.430Z",
+      "votes": 0,
+      "comment_count": "11"
+    },
+    {
+      "author": "tickle122",
+      "title": "The battle for Node.js security has only begun",
+      "article_id": 12,
+      "body": "The founder of the Node Security Project says Node.js still has common vulnerabilities, but progress has been made to make it more secure. Appearing at the recent Node Community Convention in San Francisco, project founder Adam Baldwin, chief security officer at Web consulting company &yet, emphasized risks, protections, and progress. Baldwin sees four risks within the Node ecosystem pertinent to the enterprise: the code dependency tree, bugs, malicious actors, and people. I think of [the dependency tree] more as the dependency iceberg, to be honest, Baldwin said, where your code is the ship and your dependencies that you have with your packaged JSON is that little tiny iceberg at the top. But developers need to be aware of the massive iceberg underneath, he stressed.",
+      "topic": "coding",
+      "created_at": "2017-07-17T11:34:54.879Z",
+      "votes": 0,
+      "comment_count": "7"
+    },
+    {
+      "author": "grumpy19",
+      "title": "Learn HTML5, CSS3, and Responsive WebSite Design in One Go",
+      "article_id": 9,
+      "body": "Both CSS3 and HTML5 are just about fully supported in all modern browsers, and we there are techniques in place to patch old browsers that lack support. So there is no disadvantage to using CSS3 and HTML5 today. The opposite is true, however: there are many painful, frustrating disadvantages with forgoing HTML5 and CSS3. You may already “know” a bit of HTML5 and a touch of CSS3 (or perhaps you probably know enough old-school HTML and CSS), and with this knowledge, you might have thought you needn’t learn HTML5 and CSS3 fully.",
+      "topic": "coding",
+      "created_at": "2017-03-06T02:22:14.447Z",
+      "votes": 0,
+      "comment_count": "8"
+    },
+    {
+      "author": "tickle122",
+      "title": "Why do England managers keep making the same mistakes?",
+      "article_id": 15,
+      "body": "When Roy Hodgson resigned after this summer’s debacle, the England managerial merry go-round set into motion raising hopes that change would improve the nations fortunes.  In came Sam Allardyce but the same old squad was announced – apart from Michail Antonio – resulting in a similar type performance that was customary this summer. I was an advocate of Big Sam’s appointment because of the fact he managed down the league and could see that talent lay beyond just the big clubs in the country. Roy had many faults but the biggest frustration for me was he failed to utilise an already diminished pool of English players by continuing to pick the so called elite players – who are all tainted with failure. To be fair to Allardyce his first England game came so early in the season that it made making whole sale changes difficult. We shall never know if he would have picked different players. Since he left the job it was up to Gareth Southgate to take on the mantle and again hope arose that he may start to pick some of the talented under 21s that he has worked with over the last five years.",
+      "topic": "football",
+      "created_at": "2017-03-13T18:28:30.045Z",
+      "votes": 0,
+      "comment_count": "4"
+    }
+  ]
+}
