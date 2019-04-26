@@ -15,7 +15,7 @@ class Voter extends Component {
         <button
           className="vote-button"
           id="up-vote"
-          title="Vote up"
+          title={user ? 'Vote up' : 'Log in to vote'}
           disabled={sentVotes === 1 || !user}
           onClick={() => this.vote(1)}
         >
@@ -27,7 +27,7 @@ class Voter extends Component {
         <button
           className="vote-button"
           id="down-vote"
-          title="Vote down"
+          title={user ? 'Vote down' : 'Log in to vote'}
           disabled={sentVotes === -1 || !user}
           onClick={() => this.vote(-1)}
         >
