@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Auth.css';
 
 class Auth extends Component {
@@ -66,5 +67,11 @@ class Auth extends Component {
       });
   };
 }
+
+Auth.propTypes = {
+  loginFailed: PropTypes.bool.isRequired,
+  login: PropTypes.func.isRequired,
+  logout: PropTypes.func.isRequired,
+};
 
 export default Auth;

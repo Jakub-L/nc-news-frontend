@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/CommentSubmit.css';
 
 class CommentSubmit extends Component {
@@ -46,5 +47,9 @@ class CommentSubmit extends Component {
     }
   };
 }
+
+CommentSubmit.propTypes = {
+  addComment: PropTypes.func.isRequired,
+};
 
 export default CommentSubmit;

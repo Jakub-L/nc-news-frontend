@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { navigate } from '@reach/router';
 import { ArticleCard, ArticleSort } from './index';
 import * as data from '../utils/data';
 import * as api from '../utils/api';
 import '../styles/ArticleList.css';
-import { navigate } from '@reach/router';
 
 class ArticleList extends Component {
   state = {
@@ -80,5 +81,9 @@ class ArticleList extends Component {
     });
   };
 }
+
+ArticleList.propTypes = {
+  topic: PropTypes.string,
+};
 
 export default ArticleList;

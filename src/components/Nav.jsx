@@ -68,4 +68,8 @@ class Nav extends Component {
   };
 }
 
+Nav.propTypes = {
+  logout: PropTypes.func.isRequired,
+};
+
 export default Nav;

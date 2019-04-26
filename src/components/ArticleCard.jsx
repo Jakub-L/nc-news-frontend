@@ -4,7 +4,7 @@ import { Voter } from './index';
 import { Link } from '@reach/router';
 import '../styles/ArticleCard.css';
 
-const ArticleCard = ({ article, user }) => {
+const ArticleCard = ({ article }) => {
   return (
     <div className="ArticleCard">
       <div className="article-votes">
@@ -12,7 +12,6 @@ const ArticleCard = ({ article, user }) => {
           votes={article.votes}
           section="article"
           id={article.article_id}
-          user={user}
         />
       </div>
       <Link

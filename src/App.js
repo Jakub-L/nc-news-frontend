@@ -17,11 +17,11 @@ class App extends Component {
   };
 
   render() {
-    const { topics, loginFailed } = this.state;
+    const { loginFailed } = this.state;
     return (
       <div className="App">
         <Header />
-        <Nav topics={topics} logout={this.logout} />
+        <Nav logout={this.logout} />
         <Router className="main-container">
           <ArticleList path="/" />
           <ArticleList path="/topics/:topic" />

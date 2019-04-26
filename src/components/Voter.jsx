@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { navigate } from '@reach/router';
+import PropTypes from 'prop-types';
 import * as api from '../utils/api';
 import '../styles/Voter.css';
 
@@ -50,5 +50,11 @@ class Voter extends Component {
     api.vote(inc_votes, id, section);
   };
 }
+
+Voter.propTypes = {
+  votes: PropTypes.number.isRequired,
+  section: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+};
 
 export default Voter;
