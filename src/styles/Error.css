@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: 'icon message';
-  max-width: 26em;
+  max-width: 31em;
   min-height: 8em;
   margin: 2em auto;
   padding: 1em;
@@ -12,7 +12,7 @@
 
 #error-icon {
   grid-area: icon;
-  margin: auto;
+  margin: auto 0 auto auto;
 }
 
 #error-message {
@@ -27,9 +27,11 @@
 #error-message h2,
 #error-message p {
   margin: 0;
+  text-align: center;
+  line-height: 1.5em;
 }
 
 #error-message button {
   margin-top: 0.5em;
-  width: 8em;
+  width: 9em;
 }
