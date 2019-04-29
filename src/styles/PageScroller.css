@@ -1,0 +1,34 @@
+.PageScroller {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.page-ellipsis {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+.page-ellipsis,
+#current-page {
+  display: block;
+  font-family: var(--header-font);
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.PageScroller button,
+#current-page {
+  margin: 0.2em;
+  min-width: 2em;
+}
+
+#current-page {
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5em;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  cursor: pointer;
+}

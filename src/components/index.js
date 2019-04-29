@@ -9,6 +9,7 @@ import Auth from './Auth';
 import Voter from './Voter';
 import CommentSubmit from './CommentSubmit';
 import Error from './Error';
+import PageScroller from './PageScroller';
 
 export {
   ArticleSingle,
@@ -21,5 +22,6 @@ export {
   Error,
   Header,
   Nav,
+  PageScroller,
   Voter,
 };
