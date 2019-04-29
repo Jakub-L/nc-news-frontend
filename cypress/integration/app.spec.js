@@ -191,3 +191,85 @@ describe('Single Article', () => {
     cy.get('.CommentCard').should('have.length', 7);
   });
 });
+
+describe('Voting', () => {
+  beforeEach(() => {
+    cy.clearSessionStorage();
+    cy.stub();
+  });
+  it('Voting is disabled when not logged in', () => {
+    cy.visit('/');
+    cy.get('.Voter > button').should('be.disabled');
+  });
+  it('Can vote when logged in', () => {
+    cy.visit('/login');
+    cy.get('button')
+      .contains('Log in')
+      .click();
+    cy.get('.Voter > button').should('be.enabled');
+    cy.get('.Voter')
+      .first()
+      .within(() => {
+        cy.get('#up-vote').click();
+        cy.get('#votes')
+          .invoke('text')
+          .should('equal', '8');
+      });
+    cy.get('.Voter')
+      .eq(1)
+      .within(() => {
+        cy.get('#down-vote').click();
+        cy.get('#votes')
+          .invoke('text')
+          .should('equal', '-2');
+      });
+  });
+  it('Cannot vote more than once on a single article', () => {
+    cy.visit('/login');
+    cy.get('button')
+      .contains('Log in')
+      .click();
+    cy.get('.Voter')
+      .first()
+      .within(() => {
+        cy.get('#up-vote').click();
+        cy.get('#up-vote').should('be.disabled');
+      });
+  });
+  it('Returns to 0 if voting up after voting down (and vice versa)', () => {
+    cy.visit('/login');
+    cy.get('button')
+      .contains('Log in')
+      .click();
+    cy.get('.Voter')
+      .first()
+      .within(() => {
+        cy.get('#up-vote').click();
+        cy.get('#down-vote').click();
+        cy.get('#votes')
+          .invoke('text')
+          .should('equal', '7');
+        cy.get('#down-vote').click();
+        cy.get('#up-vote').click();
+        cy.get('#votes')
+          .invoke('text')
+          .should('equal', '7');
+      });
+  });
+  it('Can vote on comments', () => {
+    cy.visit('/login');
+    cy.get('button')
+      .contains('Log in')
+      .click();
+    cy.visit('/articles/33');
+    cy.get('.comment-votes')
+      .first()
+      .within(() => {
+        cy.get('#up-vote').click();
+        cy.get('#up-vote').should('be.disabled');
+        cy.get('#votes')
+          .invoke('text')
+          .should('equal', '-3');
+      });
+  });
+});
