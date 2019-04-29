@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { navigate } from '@reach/router';
 import { ArticleList } from '.';
 import * as api from '../utils/api';
 import '../styles/UserPage.css';
@@ -36,9 +37,14 @@ class UserPage extends Component {
 
   getUserInfo = () => {
     const { username } = this.props;
-    api.getUserByUsername(username).then(user => {
-      this.setState({ user });
-    });
+    api
+      .getUserByUsername(username)
+      .then(user => {
+        this.setState({ user });
+      })
+      .catch(({ response }) => {
+        navigate(`/error/${response.status}`, { replace: true });
+      });
   };
 }
 
