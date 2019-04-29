@@ -56,7 +56,7 @@ describe('Home', () => {
   });
 });
 
-describe.only('Topics', () => {
+describe('Topics', () => {
   beforeEach(() => {
     cy.clearSessionStorage();
     cy.stub();
@@ -131,4 +131,28 @@ describe('Auth', () => {
     cy.get('input#username').should('have.class', 'login-fail');
     cy.get('p#login-fail-warning').should('exist');
   });
+});
+
+describe.only('Single Article', () => {
+  beforeEach(() => {
+    cy.clearSessionStorage();
+    cy.stub();
+  });
+  it('Clicking through the article link takes user to article', () => {
+    cy.visit('/');
+    cy.get('.ArticleCard > .article-title')
+      .contains('Seafood substitutions are increasing')
+      .click();
+    cy.url().should('equal', `${BASE_URL}/articles/33`);
+  });
+  it('Loads comments', () => {
+    cy.visit('/articles/33')
+    cy.get('.CommentCard').should('have.length', 7);
+  });
+  it('Displays comment submit box when logged in', () => {
+    cy.visit('/login');
+    cy.get('button').contains('Log in!').click();
+    cy.visit('/articles/33');
+    cy.get('.CommentSubmit').should('be.visible');
+  })
 });
