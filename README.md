@@ -85,7 +85,7 @@ The [repository](https://github.com/Jakub-L/nc-news-api) is hosted on GitHub, an
 - **[React](https://reactjs.org/)**: basic library,
 - **[Axios](https://github.com/axios/axios)**: request library used for API calls,
 - **[Reach Router](https://reach.tech/router)**: route management,
-- **[Cypres](https://www.cypress.io/)**: end-to-end testing,
+- **[Cypress](https://www.cypress.io/)**: end-to-end testing,
 
 # Authors
 
