@@ -45,4 +45,5 @@ Cypress.Commands.add('stub', () => {
   cy.route('*/articles/99999', 'fx:article-invalid-article.json');
   cy.route('*/articles/99999/comments', 'fx:article-invalid-comments.json');
   cy.route('POST', '*/articles/33/comments', 'fx:article-33-post-comment.json');
+  cy.route('DELETE', '*/comments/200', {});
 });

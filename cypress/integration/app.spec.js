@@ -172,4 +172,22 @@ describe('Single Article', () => {
       .first()
       .contains('Successful Cypress comment test.');
   });
+  it('Allows deleting a comment posted by the user', () => {
+    cy.visit('/login');
+    cy.get('button')
+      .contains('Log in!')
+      .click();
+    cy.visit('/articles/33');
+    cy.get('.CommentSubmit > textarea').type(
+      'Successful Cypress comment test.'
+    );
+    cy.get('.CommentSubmit > button').click();
+    cy.get('.CommentCard').should('have.length', 8);
+    cy.get('.CommentCard')
+      .first()
+      .within(() => {
+        cy.get('.comment-delete-button').click();
+      });
+    cy.get('.CommentCard').should('have.length', 7);
+  });
 });
