@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { navigate } from '@reach/router';
-import { CommentCard, Voter, CommentSubmit } from './index';
+import { CommentCard, Voter, CommentSubmit, PageScroller } from './index';
 import * as api from '../utils/api';
 import * as data from '../utils/data';
 import '../styles/ArticleSingle.css';
@@ -10,12 +10,16 @@ class ArticleSingle extends Component {
     loading: true,
     article: {},
     comments: [],
+    currentPage: 1,
+    lastPage: null,
   };
 
   render() {
     const {
       comments,
       loading,
+      currentPage,
+      lastPage,
       article: { article_id, author, title, body, created_at, votes },
     } = this.state;
     const user = JSON.parse(sessionStorage.getItem('user'));
@@ -46,6 +50,11 @@ class ArticleSingle extends Component {
             />
           );
         })}
+        <PageScroller
+          currentPage={currentPage}
+          lastPage={lastPage}
+          updatePage={this.updatePage}
+        />
       </div>
     );
   }
@@ -55,16 +64,23 @@ class ArticleSingle extends Component {
     this.fetchComments();
   }
 
+  componentDidUpdate(_, prevState) {
+    if (prevState.currentPage !== this.state.currentPage) {
+      this.fetchComments();
+    }
+  }
+
   fetchArticle = () => {
     const { article_id } = this.props;
     api
       .getArticleByID(article_id)
       .then(article => {
+        const lastPage = Math.ceil(Number(article.comment_count) / 10);
         article = {
           ...article,
           created_at: data.convertArticleDate(article.created_at),
         };
-        this.setState({ article, loading: false });
+        this.setState({ article, loading: false, lastPage });
       })
       .catch(({ response }) => {
         navigate(`/error/${response.status}`, { replace: true });
@@ -73,8 +89,9 @@ class ArticleSingle extends Component {
 
   fetchComments = () => {
     const { article_id } = this.props;
+    const { currentPage } = this.state;
     api
-      .getCommentsByArticle(article_id)
+      .getCommentsByArticle(article_id, currentPage)
       .then(comments => {
         comments = comments.map(comment => {
           return {
@@ -118,6 +135,10 @@ class ArticleSingle extends Component {
       .catch(({ response }) => {
         navigate(`/error/${response.status}`, { replace: true });
       });
+  };
+
+  updatePage = newPage => {
+    this.setState({ currentPage: Number(newPage) });
   };
 }
 

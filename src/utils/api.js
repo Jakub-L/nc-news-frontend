@@ -20,9 +20,9 @@ export const getArticleByID = async id => {
   return data.article;
 };
 
-export const getCommentsByArticle = async article_id => {
+export const getCommentsByArticle = async (article_id, page) => {
   const { data } = await axios.get(
-    `${BASE_URL}/articles/${article_id}/comments`
+    `${BASE_URL}/articles/${article_id}/comments${page > 1 ? `?p=${page}` : ''}`
   );
   return data.comments;
 };
