@@ -36,3 +36,19 @@
   grid-area: articles;
   border-top: 1px solid var(--medium-grey);
 }
+
+@media (max-width: 550px) {
+  .UserPage {
+    grid-template-columns: 7em auto;
+  }
+  #user-username {
+    font-size: 1.5em;
+  }
+  #user-name {
+    font-size: 1em;
+  }
+  #user-avatar {
+    width: 5em;
+    height: 5em;
+  }
+}
