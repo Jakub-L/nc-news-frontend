@@ -19,6 +19,10 @@ Cypress.Commands.add('stub', () => {
     'fx:articles-all-createdat-desc.json'
   );
   cy.route(
+    '*/articles?sort_by=created_at&order=desc&p=2',
+    'fx:articles-all-page2.json'
+  );
+  cy.route(
     '*/articles?sort_by=comment_count&order=desc',
     'fx:articles-all-commentcount-desc.json'
   );
@@ -44,6 +48,9 @@ Cypress.Commands.add('stub', () => {
   cy.route('*/articles/33/comments', 'fx:article-33-comments.json');
   cy.route('*/articles/99999', 'fx:article-invalid-article.json');
   cy.route('*/articles/99999/comments', 'fx:article-invalid-comments.json');
+  cy.route('*/articles/16', 'fx:article-16-article.json');
+  cy.route('*/articles/16/comments', 'fx:article-16-comments-page1.json');
+  cy.route('*/articles/16/comments?p=2', 'fx:article-16-comments-page2.json');
   cy.route('POST', '*/articles/33/comments', 'fx:article-33-post-comment.json');
   cy.route('DELETE', '*/comments/200', {});
 

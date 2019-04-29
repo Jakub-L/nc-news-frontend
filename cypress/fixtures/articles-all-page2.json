@@ -1,0 +1,105 @@
+{
+  "total_count": "36",
+  "articles": [
+    {
+      "author": "tickle122",
+      "title": "History of Football",
+      "article_id": 20,
+      "body": "It may come as a surprise to many, but football has a long and interesting history; sources suggest that the sport was first introduced in England as early as 1170 when an account describes youths going to the fields for a ‘game of ball’. Aspects of the game can even be traced back to as early as the second and third century BC in China. Sources taken from military manuals at the time describe an exercise called Tsu’ Chu, in which opponents used a leather ball filled with feathers and hair. The aim was to get the ball into a small net fixed on to bamboo canes while also defending themselves from attacks. Variations of the game are also documented in Egyptian and Greek society, proving that the sport has a long tradition throughout history.",
+      "topic": "football",
+      "created_at": "2017-10-10T08:18:16.497Z",
+      "votes": 0,
+      "comment_count": "5"
+    },
+    {
+      "author": "weegembump",
+      "title": "Sweet potato & butternut squash soup with lemon & garlic toast",
+      "article_id": 25,
+      "body": "Roast your vegetables in honey before blitzing into this velvety smooth, spiced soup - served with garlicky, zesty ciabatta slices for dipping",
+      "topic": "cooking",
+      "created_at": "2017-08-18T09:25:14.275Z",
+      "votes": 0,
+      "comment_count": "4"
+    },
+    {
+      "author": "grumpy19",
+      "title": "The Notorious MSG’s Unlikely Formula For Success",
+      "article_id": 34,
+      "body": "The 'umami' craze has turned a much-maligned and misunderstood food additive into an object of obsession for the world’s most innovative chefs. But secret ingredient monosodium glutamate’s biggest secret may be that there was never anything wrong with it at all.",
+      "topic": "cooking",
+      "created_at": "2017-08-16T22:08:30.430Z",
+      "votes": 0,
+      "comment_count": "11"
+    },
+    {
+      "author": "grumpy19",
+      "title": "Halal food: Keeping pure and true",
+      "article_id": 32,
+      "body": "CHINA’S cities abound with restaurants and food stalls catering to Muslims as well as to the many other Chinese who relish the distinctive cuisines for which the country’s Muslims are renowned. So popular are kebabs cooked by Muslim Uighurs on the streets of Beijing that the city banned outdoor grills in 2014 in order to reduce smoke, which officials said was exacerbating the capital’s notorious smog (the air today is hardly less noxious). Often such food is claimed to be qing zhen, meaning 'pure and true', or halal, prepared according to traditional Islamic regulations. But who can tell? Last year angry Muslims besieged a halal bakery in Xining, the capital of Qinghai province, after pork sausages were found in the shop’s delivery van. There have been several scandals in recent years involving rat meat or pork being sold as lamb. These have spread Muslim mistrust of domestically produced halal products.",
+      "topic": "cooking",
+      "created_at": "2017-08-16T07:47:21.660Z",
+      "votes": 0,
+      "comment_count": "5"
+    },
+    {
+      "author": "jessjelly",
+      "title": "Who are the most followed clubs and players on Instagram?",
+      "article_id": 19,
+      "body": "Manchester United are the UK's most popular club on Instagram, with over 14m people following their account for their latest photos and videos. United's total number of followers is over six million more than second-placed Arsenal (8.1m), while Chelsea are third on the list with 7.7m followers, according to data exclusively compiled for Sky Sports. Instagram has a 500m-strong community, with one in three people on the social media site (around 165m) following a sports account.",
+      "topic": "football",
+      "created_at": "2017-07-26T16:49:01.355Z",
+      "votes": 0,
+      "comment_count": "13"
+    },
+    {
+      "author": "happyamy2016",
+      "title": "22 Amazing open source React projects",
+      "article_id": 3,
+      "body": "This is a collection of open source apps built with React.JS library. In this observation, we compared nearly 800 projects to pick the top 22. (React Native: 11, React: 11). To evaluate the quality, Mybridge AI considered a variety of factors to determine how useful the projects are for programmers. To give you an idea on the quality, the average number of Github stars from the 22 projects was 1,681.",
+      "topic": "coding",
+      "created_at": "2017-07-21T17:54:10.346Z",
+      "votes": 0,
+      "comment_count": "10"
+    },
+    {
+      "author": "jessjelly",
+      "title": "The Rise Of Thinking Machines: How IBM's Watson Takes On The World",
+      "article_id": 2,
+      "body": "Many people know Watson as the IBM-developed cognitive super computer that won the Jeopardy! gameshow in 2011. In truth, Watson is not actually a computer but a set of algorithms and APIs, and since winning TV fame (and a $1 million prize) IBM has put it to use tackling tough problems in every industry from healthcare to finance. Most recently, IBM has announced several new partnerships which aim to take things even further, and put its cognitive capabilities to use solving a whole new range of problems around the world.",
+      "topic": "coding",
+      "created_at": "2017-07-20T20:57:53.256Z",
+      "votes": 0,
+      "comment_count": "6"
+    },
+    {
+      "author": "tickle122",
+      "title": "The battle for Node.js security has only begun",
+      "article_id": 12,
+      "body": "The founder of the Node Security Project says Node.js still has common vulnerabilities, but progress has been made to make it more secure. Appearing at the recent Node Community Convention in San Francisco, project founder Adam Baldwin, chief security officer at Web consulting company &yet, emphasized risks, protections, and progress. Baldwin sees four risks within the Node ecosystem pertinent to the enterprise: the code dependency tree, bugs, malicious actors, and people. I think of [the dependency tree] more as the dependency iceberg, to be honest, Baldwin said, where your code is the ship and your dependencies that you have with your packaged JSON is that little tiny iceberg at the top. But developers need to be aware of the massive iceberg underneath, he stressed.",
+      "topic": "coding",
+      "created_at": "2017-07-17T11:34:54.879Z",
+      "votes": 0,
+      "comment_count": "7"
+    },
+    {
+      "author": "grumpy19",
+      "title": "Thanksgiving Drinks for Everyone",
+      "article_id": 27,
+      "body": "Thanksgiving is a foodie’s favorite holiday. Mashed potatoes, cranberry sauce, stuffing, and last but not least, a juicy turkey. Don’t let your meticulous menu fall short of perfection; flavorful cocktails are just as important as the meal. Here are a few ideas that will fit right into your festivities.",
+      "topic": "cooking",
+      "created_at": "2017-04-23T18:00:55.514Z",
+      "votes": 0,
+      "comment_count": "13"
+    },
+    {
+      "author": "weegembump",
+      "title": "HOW COOKING HAS CHANGED US",
+      "article_id": 26,
+      "body": "In a cave in South Africa, archaeologists have unearthed the remains of a million-year-old campfire, and discovered tiny bits of animal bones and ash from plants. It’s the oldest evidence of our ancient human ancestors—probably Homo erectus, a species that preceded ours—cooking a meal.",
+      "topic": "cooking",
+      "created_at": "2017-04-21T12:34:54.761Z",
+      "votes": 0,
+      "comment_count": "11"
+    }
+  ]
+}

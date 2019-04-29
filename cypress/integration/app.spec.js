@@ -273,3 +273,39 @@ describe('Voting', () => {
       });
   });
 });
+
+describe('Pagination', () => {
+  beforeEach(() => {
+    cy.clearSessionStorage();
+    cy.stub();
+  });
+  it('Correctly displays the number of pages', () => {
+    cy.visit('/');
+    cy.get('.PageScroller button').should('have.length', 3);
+  });
+  it('Allows page navigation on list of articles', () => {
+    cy.visit('/');
+    cy.get('.PageScroller #2').click();
+    cy.get('.ArticleCard > .article-title')
+      .first()
+      .invoke('text')
+      .should('equal', 'History of Football');
+    cy.get('.ArticleCard > .article-title')
+      .last()
+      .invoke('text')
+      .should('equal', 'HOW COOKING HAS CHANGED US');
+  });
+  it('Allows page navigation on list of comments', () => {
+    cy.visit('/articles/16');
+    cy.get('.PageScroller #2').click();
+    cy.get('.CommentCard').should('have.length', 6)
+    cy.get('.CommentCard > .comment-body')
+      .first()
+      .invoke('text')
+      .should('include', 'Quia numquam ut fuga');
+    cy.get('.CommentCard > .comment-body')
+      .last()
+      .invoke('text')
+      .should('include', 'Aut sint ut');
+  });
+});
