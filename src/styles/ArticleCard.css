@@ -35,6 +35,7 @@
   grid-area: author;
   padding-right: 1em;
 }
+
 .article-time {
   grid-area: time;
   padding: 0 1em 0em 1em;
@@ -45,6 +46,15 @@
 .article-comments {
   grid-area: comments;
   padding-left: 1em;
+}
+
+.author-link,
+.author-link:visited {
+  color: var(--dark-grey);
+}
+
+.author-link:hover {
+  font-weight: 600;
 }
 
 @media (max-width: 550px) {

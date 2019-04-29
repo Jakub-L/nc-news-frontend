@@ -20,7 +20,12 @@ const ArticleCard = ({ article }) => {
       >
         {article.title}
       </Link>
-      <div className="article-author subheading">By {article.author}</div>
+      <div className="article-author subheading">
+        By{' '}
+        <Link className="author-link" to={`/users/${article.author}`}>
+          {article.author}
+        </Link>
+      </div>
       <div className="article-time subheading">
         Posted on {article.created_at}
       </div>
