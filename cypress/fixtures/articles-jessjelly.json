@@ -1,0 +1,75 @@
+{
+  "total_count": "7",
+  "articles": [
+    {
+      "author": "jessjelly",
+      "title": "Twice-Baked Butternut Squash Is the Thanksgiving Side Dish of Your Dreams",
+      "article_id": 30,
+      "body": "What if, for once, your Thanksgiving sides were just as dazzling as the centerpiece turkey? Imagine a world where presenting a platter of seasonal vegetables inspires the same amount of cooing that the turkey does. Welcome to the world of twice-baked butternut squash. Sure, you could just roast some squash wedges and call it a day. But where's the fun in that? To make this year's most impressive vegetable side, Epi's food director Rhoda Boone gave super-seasonal butternut squash the twice-baked potatoes treatment: Mash the inside of the vegetable with butter, cream, and anything else that might make it more delicious, then pile it back into the vegetable, bake it until golden and velvety. The result is a jaw-dropping, brightly colored sweet-meet-savory butternut squash side dish. Here are just a few more reasons this creation belongs on this year's Thanksgiving table:",
+      "topic": "cooking",
+      "created_at": "2018-05-06T02:40:35.489Z",
+      "votes": 2,
+      "comment_count": "8"
+    },
+    {
+      "author": "jessjelly",
+      "title": "Making sense of Redux",
+      "article_id": 4,
+      "body": "When I first started learning React, I remember reading lots of articles about the different technologies associated with it. In particular, this one article stood out. It mentions how confusing the ecosystem is, and how developers often feel they have to know ALL of the ecosystem before using React. And as someone who’s used React daily for the past 8 months or so, I can definitely say that I’m still barely scratching the surface in terms of understanding how the entire ecosystem works! But my time spent using React has given me some insight into when and why it might be appropriate to use another technology — Redux (a variant of the Flux architecture).",
+      "topic": "coding",
+      "created_at": "2017-12-24T05:38:51.240Z",
+      "votes": -1,
+      "comment_count": "9"
+    },
+    {
+      "author": "jessjelly",
+      "title": "Who are the most followed clubs and players on Instagram?",
+      "article_id": 19,
+      "body": "Manchester United are the UK's most popular club on Instagram, with over 14m people following their account for their latest photos and videos. United's total number of followers is over six million more than second-placed Arsenal (8.1m), while Chelsea are third on the list with 7.7m followers, according to data exclusively compiled for Sky Sports. Instagram has a 500m-strong community, with one in three people on the social media site (around 165m) following a sports account.",
+      "topic": "football",
+      "created_at": "2017-07-26T16:49:01.355Z",
+      "votes": 0,
+      "comment_count": "13"
+    },
+    {
+      "author": "jessjelly",
+      "title": "The Rise Of Thinking Machines: How IBM's Watson Takes On The World",
+      "article_id": 2,
+      "body": "Many people know Watson as the IBM-developed cognitive super computer that won the Jeopardy! gameshow in 2011. In truth, Watson is not actually a computer but a set of algorithms and APIs, and since winning TV fame (and a $1 million prize) IBM has put it to use tackling tough problems in every industry from healthcare to finance. Most recently, IBM has announced several new partnerships which aim to take things even further, and put its cognitive capabilities to use solving a whole new range of problems around the world.",
+      "topic": "coding",
+      "created_at": "2017-07-20T20:57:53.256Z",
+      "votes": 0,
+      "comment_count": "6"
+    },
+    {
+      "author": "jessjelly",
+      "title": "Game of talents: management lessons from top football coaches",
+      "article_id": 24,
+      "body": "At lunchtime on the day of the Champions League final in 2012, Chelsea’s manager Roberto Di Matteo had selected 10 of his 11 players. He just didn’t know who to play in left midfield. The player would have to combat Bayern Munich’s brilliant Arjen Robben and Philipp Lahm. Going into the last team meeting, Di Matteo had a private chat with his left-back, Ashley Cole. He outlined the situation, then asked Cole who he would play at left-midfield. Instead of naming a seasoned star, Cole said: “Ryan Bertrand.” The 22-year-old reserve Bertrand had never played in the Champions League, let alone in club football’s biggest game. “Why?” asked Di Matteo, surprised. “I trust him,” replied Cole. Bertrand played well, and Chelsea beat Bayern on penalties. In part, this was a victory for talent management. Di Matteo had put aside his ego, and let trust between two players drive the decision. Talent management has been a business obsession at least since 1997, when the consultancy McKinsey identified a “war for talent”. The most visible battleground of this “war” is team sport. Football, in particular, is “the quintessential model for modern-day talent-dependent business”, writes Chris Brady, professor at Salford Business School. Big football clubs pay more than half their revenues to between 3 and 7 per cent of their workforce: the players. These young men are rich, multinational, mobile, often equipped with large egos and therefore hard to manage. Football managers are, above all, talent managers.",
+      "topic": "football",
+      "created_at": "2017-04-01T10:54:48.304Z",
+      "votes": 0,
+      "comment_count": "5"
+    },
+    {
+      "author": "jessjelly",
+      "title": "Please stop worrying about Angular 3",
+      "article_id": 5,
+      "body": "Another Angular version planned already? Whaaaat? Didn’t Angular 2 just ship? Why Angular 3? What? Why? First off, there is no massive rewrite, and won’t be for Angular 3. Secondly, let me explain the future of Angular 2 and what Angular 3, Angular 4 will mean for you.",
+      "topic": "coding",
+      "created_at": "2016-10-24T04:13:02.648Z",
+      "votes": 0,
+      "comment_count": "6"
+    },
+    {
+      "author": "jessjelly",
+      "title": "Running a Node App",
+      "article_id": 1,
+      "body": "This is part two of a series on how to get up and running with Systemd and Node.js. This part dives deeper into how to successfully run your app with systemd long-term, and how to set it up in a production environment.",
+      "topic": "coding",
+      "created_at": "2016-08-18T12:07:52.389Z",
+      "votes": 0,
+      "comment_count": "8"
+    }
+  ]
+}

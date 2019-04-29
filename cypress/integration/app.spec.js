@@ -316,3 +316,32 @@ describe('Pagination', () => {
       .should('include', 'Aut sint ut');
   });
 });
+
+describe('User Pages', () => {
+  beforeEach(() => {
+    cy.clearSessionStorage();
+    cy.stub();
+  });
+  it('Displays correct user', () => {
+    cy.visit('/users/jessjelly');
+    cy.get('.ArticleCard').should('have.length', 7);
+    cy.get('#user-username')
+      .invoke('text')
+      .should('equal', 'jessjelly');
+  });
+  it('Allows navigation from clicked links', () => {
+    cy.visit('/');
+    cy.get('.author-link')
+      .contains('jessjelly')
+      .first()
+      .click();
+    cy.get('.ArticleCard').should('have.length', 7);
+    cy.get('#user-username')
+      .invoke('text')
+      .should('equal', 'jessjelly');
+  });
+  it('Redirects to 404 when invalid user is asked for', () => {
+    cy.visit('/users/invalid');
+    cy.location('pathname').should('eq', '/error/404');
+  });
+});

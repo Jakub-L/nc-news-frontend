@@ -43,6 +43,15 @@ Cypress.Commands.add('stub', () => {
     status: 404,
     response: 'fx:articles-invalid.json',
   });
+  cy.route(
+    '*/articles?sort_by=created_at&order=desc&author=jessjelly',
+    'fx:articles-jessjelly.json'
+  );
+  cy.route({
+    url: '*/articles?sort_by=created_at&order=desc&author=invalid',
+    status: 404,
+    response: 'fx:articles-jessjelly.json',
+  });
 
   // Individual article routes
   cy.route('*/articles/33', 'fx:article-33-article.json');
