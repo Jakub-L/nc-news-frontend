@@ -56,6 +56,38 @@ describe('Home', () => {
   });
 });
 
+describe.only('Topics', () => {
+  beforeEach(() => {
+    cy.clearSessionStorage();
+    cy.stub();
+  });
+  it('Lists correct number of topics in navigation bar', () => {
+    cy.visit('/');
+    cy.get('.dropdown-list-link').should('have.length', 3);
+  });
+  it('Displays articles on particle topics', () => {
+    cy.visit('/topics/football');
+    cy.get('.ArticleCard > .article-title')
+      .first()
+      .invoke('text')
+      .should(
+        'equal',
+        "What does Jose Mourinho's handwriting say about his personality?"
+      );
+    cy.get('.ArticleCard > .article-title')
+      .last()
+      .invoke('text')
+      .should('equal', 'Agility Training Drills For Football Players');
+  });
+  it('Allows navigating to topics from links in navbar', () => {
+    cy.visit('/');
+    cy.get('.dropdown-list-link')
+      .contains('football')
+      .click({ force: true });
+    cy.url().should('equal', `${BASE_URL}/topics/football`);
+  });
+});
+
 describe('Auth', () => {
   beforeEach(() => {
     cy.clearSessionStorage();
