@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from '@reach/router';
 import '../styles/CommentCard.css';
 import { Voter } from './index';
 
@@ -12,7 +13,11 @@ const CommentCard = ({ comment, removeComment }) => {
         <Voter votes={votes} section="comment" id={comment_id} />
       </div>
       <div className="comment-author-time subheading">
-        By {author} on {created_at}
+        By{' '}
+        <Link className="author-link" to={`/users/${author}`}>
+          {author}
+        </Link>{' '}
+        on {created_at}
       </div>
       {storedUser && storedUser.username === author ? (
         <button

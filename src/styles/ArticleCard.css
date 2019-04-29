@@ -48,15 +48,6 @@
   padding-left: 1em;
 }
 
-.author-link,
-.author-link:visited {
-  color: var(--dark-grey);
-}
-
-.author-link:hover {
-  font-weight: 600;
-}
-
 @media (max-width: 550px) {
   .ArticleCard {
     grid-template-columns: 4em auto;

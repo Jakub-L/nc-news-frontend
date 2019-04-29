@@ -62,6 +62,15 @@
   animation-timing-function: ease-in-out;
 }
 
+.author-link,
+.author-link:visited {
+  color: var(--dark-grey);
+}
+
+.author-link:hover {
+  font-weight: 600;
+}
+
 /* ELEMENT STYLES */
 body {
   margin: 0;

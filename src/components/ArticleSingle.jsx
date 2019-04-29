@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { navigate } from '@reach/router';
+import { navigate, Link } from '@reach/router';
 import { CommentCard, Voter, CommentSubmit, PageScroller } from './index';
 import * as api from '../utils/api';
 import * as data from '../utils/data';
@@ -33,7 +33,11 @@ class ArticleSingle extends Component {
           </div>
           <div className="article-title heading">{title}</div>
           <div className="article-author-time subheading">
-            By {author} on {created_at}
+            By{' '}
+            <Link className="author-link" to={`/users/${author}`}>
+              {author}
+            </Link>{' '}
+            on {created_at}
           </div>
           <div className="article-body body">{body}</div>
         </div>
