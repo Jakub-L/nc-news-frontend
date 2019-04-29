@@ -38,16 +38,25 @@ Cypress.Commands.add('stub', () => {
     '*/articles?sort_by=created_at&order=desc&topic=football',
     'fx:articles-football-createdat-desc.json'
   );
-  cy.route(
-    '*/articles?sort_by=created_at&order=desc&topic=invalid',
-    'fx:articles-invalid.json'
-  );
+  cy.route({
+    url: '*/articles?sort_by=created_at&order=desc&topic=invalid',
+    status: 404,
+    response: 'fx:articles-invalid.json',
+  });
 
   // Individual article routes
   cy.route('*/articles/33', 'fx:article-33-article.json');
   cy.route('*/articles/33/comments', 'fx:article-33-comments.json');
-  cy.route('*/articles/99999', 'fx:article-invalid-article.json');
-  cy.route('*/articles/99999/comments', 'fx:article-invalid-comments.json');
+  cy.route({
+    url: '*/articles/99999',
+    status: 404,
+    response: 'fx:article-invalid-article.json',
+  });
+  cy.route({
+    url: '*/articles/99999/comments',
+    status: 404,
+    response: 'fx:article-invalid-comments.json',
+  });
   cy.route('*/articles/16', 'fx:article-16-article.json');
   cy.route('*/articles/16/comments', 'fx:article-16-comments-page1.json');
   cy.route('*/articles/16/comments?p=2', 'fx:article-16-comments-page2.json');

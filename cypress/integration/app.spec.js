@@ -1,4 +1,3 @@
-const BASE_URL = Cypress.config().baseUrl;
 describe('Home', () => {
   beforeEach(() => {
     cy.clearSessionStorage();
@@ -84,7 +83,11 @@ describe('Topics', () => {
     cy.get('.dropdown-list-link')
       .contains('football')
       .click({ force: true });
-    cy.url().should('equal', `${BASE_URL}/topics/football`);
+    cy.location('pathname').should('eq', '/topics/football');
+  });
+  it('Redirects to error page when visiting non-existent topic', () => {
+    cy.visit('/topics/invalid');
+    cy.location('pathname').should('eq', '/error/404');
   });
 });
 
@@ -99,14 +102,14 @@ describe('Auth', () => {
     cy.get('button')
       .contains('Log in')
       .click();
-    cy.url().should('equal', `${BASE_URL}/`);
+    cy.location('pathname').should('eq', '/');
   });
   it('Allows logging in with a non-default, but valid username', () => {
     cy.get('input#username').type('jessjelly');
     cy.get('button')
       .contains('Log in')
       .click();
-    cy.url().should('equal', `${BASE_URL}/`);
+    cy.location('pathname').should('eq', '/');
   });
   it('Clears default when input box is selected, but default returns when blurred', () => {
     cy.get('input#username')
@@ -121,7 +124,7 @@ describe('Auth', () => {
     cy.get('button')
       .contains('Log in')
       .click();
-    cy.url().should('equal', `${BASE_URL}/articles/33`);
+    cy.location('pathname').should('eq', '/articles/33');
   });
   it('Fails login with invalid username and displays notification', () => {
     cy.get('input#username').type('invalid');
@@ -143,7 +146,7 @@ describe('Single Article', () => {
     cy.get('.ArticleCard > .article-title')
       .contains('Seafood substitutions are increasing')
       .click();
-    cy.url().should('equal', `${BASE_URL}/articles/33`);
+    cy.location('pathname').should('eq', '/articles/33');
   });
   it('Loads comments', () => {
     cy.visit('/articles/33');
@@ -189,6 +192,10 @@ describe('Single Article', () => {
         cy.get('.comment-delete-button').click();
       });
     cy.get('.CommentCard').should('have.length', 7);
+  });
+  it('Takes user to 404 page when given non-existent article', () => {
+    cy.visit('/articles/99999');
+    cy.location('pathname').should('eq', '/error/404');
   });
 });
 
@@ -298,7 +305,7 @@ describe('Pagination', () => {
   it('Allows page navigation on list of comments', () => {
     cy.visit('/articles/16');
     cy.get('.PageScroller #2').click();
-    cy.get('.CommentCard').should('have.length', 6)
+    cy.get('.CommentCard').should('have.length', 6);
     cy.get('.CommentCard > .comment-body')
       .first()
       .invoke('text')
