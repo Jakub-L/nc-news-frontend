@@ -1,0 +1,38 @@
+.UserPage {
+  display: grid;
+  grid-template-columns: 10em auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    'avatar username'
+    'avatar name'
+    'articles articles';
+}
+
+#user-avatar {
+  grid-area: avatar;
+  width: 8em;
+  height: 8em;
+  margin: 0.5em;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  border: 1px solid var(--medium-grey);
+}
+
+#user-username {
+  grid-area: username;
+  margin-top: 0.5em;
+  align-self: end;
+  font-size: 2.5em;
+}
+
+#user-name {
+  grid-area: name;
+  margin-bottom: 2em;
+  align-self: start;
+  font-size: 1.5em;
+}
+
+#user-articles {
+  grid-area: articles;
+  border-top: 1px solid var(--medium-grey);
+}

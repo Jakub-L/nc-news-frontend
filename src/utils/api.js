@@ -6,11 +6,11 @@ export const getTopics = async () => {
   return data.topics;
 };
 
-export const getArticles = async (topic, sortBy, sortOrder, page) => {
+export const getArticles = async (topic, sortBy, sortOrder, page, author) => {
   const { data } = await axios.get(
     `${BASE_URL}/articles?sort_by=${sortBy}&order=${sortOrder}${
       topic ? `&topic=${topic}` : ''
-    }${page > 1 ? `&p=${page}` : ''}`
+    }${page > 1 ? `&p=${page}` : ''}${author ? `&author=${author}` : ''}`
   );
   return [data.articles, data.total_count];
 };

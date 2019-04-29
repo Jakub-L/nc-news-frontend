@@ -10,6 +10,7 @@ import {
 } from './components';
 import * as api from './utils/api';
 import './styles/App.css';
+import UserPage from './components/UserPage';
 
 class App extends Component {
   state = {
@@ -32,6 +33,7 @@ class App extends Component {
             logout={this.logout}
             loginFailed={loginFailed}
           />
+          <UserPage path="/users/:username" />
           <Error default />
         </Router>
       </div>

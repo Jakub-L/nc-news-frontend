@@ -18,11 +18,14 @@ class ArticleList extends Component {
 
   render() {
     const { articles, loading, sortOrder, currentPage, lastPage } = this.state;
+    const { topic } = this.props;
     return (
       <div className="ArticleList">
-        <h2 className="heading" id="topic-heading">
-          NCNews/{this.props.topic || 'all'}
-        </h2>
+        {topic && (
+          <h2 className="heading" id="topic-heading">
+            NCNews/{topic || 'all'}
+          </h2>
+        )}
         <ArticleSort
           updateSortCategory={this.updateSortCategory}
           updateSortOrder={this.updateSortOrder}
@@ -60,11 +63,11 @@ class ArticleList extends Component {
   }
 
   fetchArticles = () => {
-    const { topic } = this.props;
+    const { topic, username: author } = this.props;
     const { sortBy, sortOrder, currentPage } = this.state;
     this.setState({ loading: true });
     api
-      .getArticles(topic, sortBy, sortOrder, currentPage)
+      .getArticles(topic, sortBy, sortOrder, currentPage, author)
       .then(([articles, total_count]) => {
         const lastPage = Math.ceil(total_count / 10);
         articles = articles.map(article => {
