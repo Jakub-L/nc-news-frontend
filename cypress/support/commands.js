@@ -40,8 +40,9 @@ Cypress.Commands.add('stub', () => {
   );
 
   // Individual article routes
-  cy.route('*/articles/33', 'fx:article-33-article');
-  cy.route('*/articles/33/comments', 'fx:article-33-comments');
-  cy.route('*/articles/99999', 'fx:article-invalid-article');
-  cy.route('*/articles/99999/comments', 'fx:article-invalid-comments');
+  cy.route('*/articles/33', 'fx:article-33-article.json');
+  cy.route('*/articles/33/comments', 'fx:article-33-comments.json');
+  cy.route('*/articles/99999', 'fx:article-invalid-article.json');
+  cy.route('*/articles/99999/comments', 'fx:article-invalid-comments.json');
+  cy.route('POST', '*/articles/33/comments', 'fx:article-33-post-comment.json');
 });

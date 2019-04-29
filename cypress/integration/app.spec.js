@@ -133,7 +133,7 @@ describe('Auth', () => {
   });
 });
 
-describe.only('Single Article', () => {
+describe('Single Article', () => {
   beforeEach(() => {
     cy.clearSessionStorage();
     cy.stub();
@@ -146,13 +146,30 @@ describe.only('Single Article', () => {
     cy.url().should('equal', `${BASE_URL}/articles/33`);
   });
   it('Loads comments', () => {
-    cy.visit('/articles/33')
+    cy.visit('/articles/33');
     cy.get('.CommentCard').should('have.length', 7);
   });
   it('Displays comment submit box when logged in', () => {
     cy.visit('/login');
-    cy.get('button').contains('Log in!').click();
+    cy.get('button')
+      .contains('Log in!')
+      .click();
     cy.visit('/articles/33');
     cy.get('.CommentSubmit').should('be.visible');
-  })
+  });
+  it('Allows posting a comment and optimistically displays it', () => {
+    cy.visit('/login');
+    cy.get('button')
+      .contains('Log in!')
+      .click();
+    cy.visit('/articles/33');
+    cy.get('.CommentSubmit > textarea').type(
+      'Successful Cypress comment test.'
+    );
+    cy.get('.CommentSubmit > button').click();
+    cy.get('.CommentCard').should('have.length', 8);
+    cy.get('.CommentCard > .comment-body')
+      .first()
+      .contains('Successful Cypress comment test.');
+  });
 });
